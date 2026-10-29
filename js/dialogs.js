@@ -707,7 +707,10 @@
       var el = cellOf(e); if (!el) return;
       tuvi.focusChi = Number(el.getAttribute('data-chi')); tuvi.hoverChi = -1; drawLinks();
     });
-    window.addEventListener('resize', function () { if (openModal === 'tuvi') { drawLinks(); drawEdges(); } });
+    var relayout = function () { if (openModal === 'tuvi' && lookup.tab === 'laso') { drawLinks(); drawEdges(); } };
+    window.addEventListener('resize', relayout);
+    // mở/đóng bảng Copy prompt làm lá số co giãn mà cửa sổ không đổi cỡ → vẽ lại Tuần/Triệt & đường nối
+    if (window.ResizeObserver) new ResizeObserver(relayout).observe(board);
     $('btnCopyPrompt').addEventListener('click', function () { copyPrompt(); });
     $('aiBody').addEventListener('click', function (e) {
       if (e.target.id === 'aiCopyAgain') copyText($('aiCopyText').value).then(function (ok) { $('aiStatus').textContent = ok ? 'Đã sao chép lại' : 'Trình duyệt chặn sao chép – hãy bôi đen ô bên dưới rồi Ctrl/Cmd+C'; });
@@ -757,8 +760,6 @@
     var ready = sysPrompt ? Promise.resolve(sysPrompt) : loadSysPrompt();
     ready.then(function (sp) {
       var text = window.TuViPrompt.copyText(sp ? sp.prompt : '', tuvi.laSo, cauHoi);
-      var note = !sp ? '<p class="ai-copy-warn">Không lấy được prompt từ <code>server/prompt.txt</code> (cần chạy <code>npm start</code>) nên đang dùng prompt mặc định.</p>'
-        : !sp.custom ? '<p class="ai-copy-warn">Chưa có <code>server/prompt.txt</code> nên đang dùng prompt mặc định.</p>' : '';
       $('aiPanel').hidden = false;
       $('aiBody').innerHTML =
         '<div class="ai-copy">' +
@@ -768,7 +769,6 @@
         '<a class="btn ghost small" href="https://chatgpt.com/" target="_blank" rel="noopener">ChatGPT ↗</a>' +
         '<a class="btn ghost small" href="https://claude.ai/new" target="_blank" rel="noopener">Claude ↗</a>' +
         '<button type="button" class="btn primary small" id="aiCopyAgain">Sao chép lại</button></div>' +
-        note +
         '<textarea id="aiCopyText" class="ai-copy-text" readonly></textarea></div>';
       $('aiCopyText').value = text;
       try { $('aiPanel').scrollIntoView({ block: 'nearest' }); } catch (e) { /* ignore */ }

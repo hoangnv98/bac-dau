@@ -619,7 +619,6 @@ body.modal-open #app { filter: blur(6px) brightness(0.6); }
 .ai-copy p { margin: 0; }
 .ai-copy-links { display: flex; flex-wrap: wrap; gap: 0.4rem; }
 .ai-copy-links a { text-decoration: none; }
-.ai-copy-warn { color: #b45309; background: #fffbeb; border: 1px solid #fde68a; border-radius: 0.4rem; padding: 0.4rem 0.6rem; }
 .ai-copy-text {
   flex: 1; min-height: 12rem; width: 100%; box-sizing: border-box; resize: vertical;
   font: 0.72rem/1.45 ui-monospace, SFMono-Regular, Menlo, monospace; color: #374151;
