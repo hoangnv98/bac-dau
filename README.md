@@ -25,7 +25,7 @@ Không cần build. Tailwind CSS được nạp qua CDN; toàn bộ layout cốt
 | `js/dialogs.js` | Hộp thoại "Đi tới ngày" (dương/âm lịch), "Ngày của tôi" và màn hình "Lá số Tử Vi" |
 | `js/tuvi.bundle.js` | Bản đóng gói của module Tử Vi cho trình duyệt (sinh bởi `npm run build:tuvi`) |
 | `js/tuvi-prompt.js` | Ghép prompt luận giải (mô tả lá số bằng văn bản) – dùng chung cho server và nút "Copy prompt" |
-| `server/server.js` | Server tĩnh + `GET /api/prompt` trả nội dung `server/prompt.txt` (prompt luận giải) |
+| `server/server.js` | Server tĩnh + `GET /api/prompt` trả `server/prompt.txt` nếu có (thay prompt mặc định) |
 | `tuvi/` | Module Node.js lập Lá số Tử Vi (xem `tuvi/README.md`) |
 
 ## Responsive
@@ -70,18 +70,20 @@ Không cần build. Tailwind CSS được nạp qua CDN; toàn bộ layout cốt
 
 ## Copy prompt luận giải
 
-Nút **Copy prompt** (phím `P` / nút Đỏ) chép vào clipboard một đoạn văn bản gồm prompt luận giải (`server/prompt.txt`) và lá số
+Nút **Copy prompt** (phím `P` / nút Đỏ) chép vào clipboard một đoạn văn bản gồm prompt luận giải và lá số
 viết bằng tiếng Việt: thông tin chung, Tứ Hóa, đại hạn/tiểu hạn năm đang xem, rồi từng cung với chính tinh (độ sáng, ngũ hành),
 sao tốt, sao xấu, tam hợp và xung chiếu. Người dùng tự dán vào Gemini / ChatGPT / Claude – không cần API key.
 Trong tab Tra cứu, *Copy prompt cung này* thêm yêu cầu chỉ luận riêng một cung.
 
 ```bash
-#  sửa server/prompt.txt = prompt luận giải của bạn
+#  (tùy chọn) tạo server/prompt.txt để thay prompt mặc định
 npm start                            # http://localhost:8080
 ```
 
-- Phần mô tả lá số nằm ở `js/tuvi-prompt.js` (`moTaLaSo`), dùng chung cho trình duyệt và server.
-- Prompt lấy qua `GET /api/prompt`, nên ai mở được giao diện cũng đọc được `prompt.txt`. Không chạy server thì dùng prompt mặc định.
+- Prompt mặc định (thầy tử vi luận 12 mục: bản mệnh, phu thê, tài sản, phụ mẫu, thiên di, tật ách, nô bộc, quan lộc, điền trạch,
+  tử tức, huynh đệ, phúc đức, rồi vận hạn) và phần mô tả lá số nằm ở `js/tuvi-prompt.js` (`DEFAULT_SYSTEM`, `moTaLaSo`),
+  nên mở thẳng `index.html` không cần server vẫn dùng được.
+- Nếu có `server/prompt.txt` và đang chạy server, prompt đó được lấy qua `GET /api/prompt` thay cho mặc định (ai mở được giao diện cũng đọc được).
 - Nếu mở `index.html` trực tiếp (file://), giao diện sẽ gọi `http://localhost:8080`; có thể đổi bằng `localStorage.setItem('aiApiBase', 'https://may-chu-cua-ban')`.
 - Đổi cổng: `PORT=3000 npm start`.
 

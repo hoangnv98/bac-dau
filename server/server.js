@@ -1,7 +1,7 @@
 /*
  * Server tĩnh cho Lịch Vạn Niên / Tử Vi.
  * Chạy:  node server/server.js   (mặc định http://localhost:8080, đổi cổng bằng biến môi trường PORT)
- * Prompt: server/prompt.txt – không phục vụ dạng file tĩnh; trình duyệt chỉ lấy được qua GET /api/prompt (nút "Copy prompt").
+ * Prompt: server/prompt.txt (tùy chọn, thay prompt mặc định trong js/tuvi-prompt.js) – không phục vụ dạng file tĩnh; trình duyệt chỉ lấy được qua GET /api/prompt (nút "Copy prompt").
  */
 import http from 'node:http';
 import fs from 'node:fs';
