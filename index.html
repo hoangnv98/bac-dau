@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#181b20">
+  <title>Lịch Vạn Niên</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css?v=20261028e">
+</head>
+<body class="bg-[#181b20] text-slate-100 overflow-hidden">
+  <main id="app">
+
+    <!-- ===== CỘT TRÁI: Thông tin ngày đang chọn ===== -->
+    <section id="left">
+      <div class="flex items-center justify-between">
+        <div id="eyebrow" class="eyebrow">HÔM NAY</div>
+        <div id="clock" class="clock">--:--</div>
+      </div>
+
+      <div class="row mt-[2vh]">
+        <div id="solarDay" class="num-xl">--</div>
+        <div class="pb-[0.6vh]">
+          <div id="weekday" class="t-lg">—</div>
+          <div id="solarMY" class="t-md">—</div>
+        </div>
+      </div>
+
+      <div class="divider"></div>
+
+      <div class="row">
+        <div id="lunarDay" class="num-lg">--</div>
+        <div class="pb-[0.4vh]">
+          <div id="lunarMonth" class="t-lg">—</div>
+          <div id="lunarYear" class="t-md">—</div>
+        </div>
+      </div>
+
+      <div id="dayTags" class="flex flex-wrap gap-[0.5vw] mt-[1.6vh]"></div>
+
+      <div class="mt-[2.2vh] space-y-[0.6vh]">
+        <div id="canChi" class="info-line"></div>
+        <div id="hoangDao" class="info-line"></div>
+        <div id="trucSao" class="info-line"></div>
+      </div>
+
+      <div class="mt-[2.6vh]">
+        <div class="eyebrow">Giờ hoàng đạo</div>
+        <div id="gioHD" class="gio-grid mt-[1vh]"></div>
+      </div>
+
+      <div class="mt-auto pt-[2vh] min-h-0">
+        <div class="eyebrow">Sắp tới</div>
+        <ul id="upcoming" class="upcoming mt-[0.8vh]"></ul>
+      </div>
+    </section>
+
+    <!-- ===== CỘT PHẢI: Lịch tháng ===== -->
+    <section id="right">
+      <header class="cal-header">
+        <div id="todayLine" class="t-sm text-slate-500"></div>
+        <h1 id="monthTitle" class="month-title">—</h1>
+        <div class="hint">
+          <div class="tools">
+            <button type="button" class="tool act-goto">Đi tới ngày</button>
+            <button type="button" class="tool act-mine">Ngày của tôi</button>
+            <button type="button" class="tool act-tuvi">Lá số Tử Vi</button>
+          </div>
+          <div><kbd>← ↑ → ↓</kbd> chọn ngày · <kbd>PgUp</kbd>/<kbd>PgDn</kbd> đổi tháng · <kbd>T</kbd> hôm nay · <kbd>G</kbd> đi tới ngày · <kbd>N</kbd> ngày của tôi · <kbd>V</kbd> Tử Vi</div>
+        </div>
+      </header>
+
+      <!-- Thanh điều khiển cảm ứng (chỉ hiện trên điện thoại) -->
+      <div class="mobile-bar">
+        <button type="button" id="btnPrev" aria-label="Tháng trước">‹ Tháng trước</button>
+        <button type="button" id="btnToday" class="today-btn" aria-label="Về hôm nay">Hôm nay</button>
+        <button type="button" id="btnNext" aria-label="Tháng sau">Tháng sau ›</button>
+        <button type="button" class="act-goto">Đi tới ngày</button>
+        <button type="button" class="act-mine">Ngày của tôi</button>
+        <button type="button" class="act-tuvi">Lá số Tử Vi</button>
+      </div>
+
+      <div class="weekdays">
+        <div>T2</div><div>T3</div><div>T4</div><div>T5</div><div>T6</div><div>T7</div><div class="sun">CN</div>
+      </div>
+
+      <div id="grid" class="grid"></div>
+
+      <footer id="monthEvents" class="month-events"></footer>
+    </section>
+  </main>
+
+  <!-- ===== HỘP THOẠI: Đi tới ngày ===== -->
+  <div id="modalGoto" class="modal" hidden>
+    <div class="modal-box goto-box" role="dialog" aria-label="Đi tới ngày">
+      <div class="modal-title">Đi tới ngày</div>
+      <div class="goto-row">
+        <div class="field seg" data-field="type">
+          <button type="button" class="seg-btn is-on" data-type="solar">Dương lịch</button>
+          <button type="button" class="seg-btn" data-type="lunar">Âm lịch</button>
+        </div>
+      </div>
+      <div class="goto-row">
+        <label class="field" data-field="day"><span>Ngày</span><input id="gotoDay" type="number" inputmode="numeric" min="1" max="31"></label>
+        <label class="field" data-field="month"><span>Tháng</span><input id="gotoMonth" type="number" inputmode="numeric" min="1" max="12"></label>
+        <label class="field wide" data-field="year"><span>Năm</span><input id="gotoYear" type="number" inputmode="numeric" min="1800" max="2199"></label>
+        <label class="field check" data-field="leap" id="gotoLeapWrap" hidden><input id="gotoLeap" type="checkbox"><span>Nhuận</span></label>
+      </div>
+      <div id="gotoPreview" class="goto-preview"></div>
+      <div class="modal-actions">
+        <button type="button" class="btn ghost act-close">Đóng</button>
+        <button type="button" class="btn primary field" data-field="ok" id="gotoOk">Đi tới</button>
+      </div>
+      <div class="modal-hint">← → chọn ô · ↑ ↓ hoặc gõ số · Enter đi tới · Esc đóng</div>
+    </div>
+  </div>
+
+  <!-- ===== HỘP THOẠI: Ngày của tôi (sinh nhật, ngày giỗ, kỷ niệm) ===== -->
+  <div id="modalMine" class="modal" hidden>
+    <div class="modal-box mine-box" role="dialog" aria-label="Ngày của tôi">
+      <div class="mine-head">
+        <div>
+          <div class="modal-title">Ngày của tôi</div>
+          <div class="mine-sub">Sinh nhật, ngày giỗ, kỷ niệm… hiện trên lịch hằng năm</div>
+        </div>
+        <button type="button" class="mine-x act-close" aria-label="Đóng">✕</button>
+      </div>
+
+      <form id="mineForm" class="mine-form" autocomplete="off">
+        <label class="mf mf-name"><span>Tên sự kiện</span><input id="mineName" type="text" maxlength="80" placeholder="VD: Sinh nhật mẹ, Giỗ ông nội" required></label>
+        <div class="mf mf-type"><span>Theo lịch</span>
+          <div class="mine-seg" id="mineType">
+            <button type="button" class="seg-btn is-on" data-type="solar">Dương lịch</button>
+            <button type="button" class="seg-btn" data-type="lunar">Âm lịch</button>
+          </div>
+        </div>
+        <label class="mf"><span>Ngày</span><input id="mineDay" type="number" inputmode="numeric" min="1" max="31" required></label>
+        <label class="mf"><span>Tháng</span><input id="mineMonth" type="number" inputmode="numeric" min="1" max="12" required></label>
+        <label class="mf"><span>Năm gốc</span><input id="mineYear" type="number" inputmode="numeric" min="1800" max="2199" placeholder="Tùy chọn"></label>
+        <div class="mf-actions">
+          <button type="button" class="btn ghost" id="mineCancel" hidden>Hủy</button>
+          <button type="submit" class="btn primary" id="mineSave">Thêm</button>
+        </div>
+        <div id="mineMsg" class="mine-msg"></div>
+      </form>
+
+      <ul id="mineList" class="mine-list"></ul>
+
+      <div class="mine-foot">
+        <span class="mine-note">Lưu trên trình duyệt này · Esc đóng</span>
+        <button type="button" class="btn ghost small" id="mineExport">Xuất file</button>
+        <button type="button" class="btn ghost small" id="mineImport">Nhập file</button>
+        <input type="file" id="mineFile" accept="application/json,.json" hidden>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== MÀN HÌNH: Lá số Tử Vi ===== -->
+  <div id="modalTuVi" class="modal" hidden>
+    <div class="modal-box tuvi-box" role="dialog" aria-label="Lá số Tử Vi">
+      <div class="tuvi-top">
+        <div class="modal-title">Lá số Tử Vi
+          <span class="tuvi-tabs" id="tuviTabs">
+            <button type="button" class="tab-btn is-on" data-tab="laso">Lá số</button>
+            <button type="button" class="tab-btn" data-tab="tracuu">Tra cứu</button>
+          </span>
+        </div>
+        <div class="tuvi-controls">
+          <label class="field"><span>Họ tên</span><input id="tuviName" type="text" placeholder="Họ tên" autocomplete="off"></label>
+          <div class="field"><span>Ngày sinh</span>
+            <div class="seg" id="tuviCal">
+              <button type="button" class="seg-btn is-on" data-cal="solar">Dương lịch</button>
+              <button type="button" class="seg-btn" data-cal="lunar">Âm lịch</button>
+            </div>
+          </div>
+          <label class="field"><span>Giờ sinh</span><select id="tuviHour"></select></label>
+          <div class="field"><span>Giới tính</span>
+            <div class="seg" id="tuviGender">
+              <button type="button" class="seg-btn is-on" data-gender="nam">Nam</button>
+              <button type="button" class="seg-btn" data-gender="nữ">Nữ</button>
+            </div>
+          </div>
+          <label class="field"><span>Năm xem</span><select id="tuviYear"></select></label>
+          <button type="button" class="btn primary" id="btnCopyPrompt" title="Chép prompt + lá số để tự dán vào Gemini / ChatGPT">Copy prompt</button>
+          <button type="button" class="btn ghost act-close">Đóng</button>
+        </div>
+      </div>
+      <div class="tuvi-body">
+        <div class="av-wrap">
+          <div id="tuviBoard" class="av-board"></div>
+          <div class="av-legend">
+            <span><b>M:</b> Miếu &nbsp;<b>V:</b> Vượng &nbsp;<b>Đ:</b> Đắc &nbsp;<b>B:</b> Bình hòa &nbsp;<b>H:</b> Hãm</span>
+            <span class="av-legend-hanh"><i class="h-kim">■</i> Kim <i class="h-moc">■</i> Mộc <i class="h-thuy">■</i> Thủy <i class="h-hoa">■</i> Hỏa <i class="h-tho">■</i> Thổ</span>
+          </div>
+        </div>
+        <div id="tuviLookup" class="lk" hidden>
+          <aside class="lk-side">
+            <div class="lk-side-title">Tra cứu nhanh</div>
+            <input id="lkSearch" type="search" placeholder="Tìm kiếm sao" autocomplete="off">
+            <div class="lk-group"><div class="lk-group-title">Chính tinh</div><ul id="lkChinh"></ul></div>
+            <div class="lk-group"><div class="lk-group-title">Phụ tinh</div><ul id="lkPhu"></ul></div>
+          </aside>
+          <div class="lk-main" id="lkMain"></div>
+        </div>
+        <aside id="aiPanel" class="ai-panel" hidden>
+          <div class="ai-head">
+            <b>Copy prompt</b>
+            <span id="aiStatus" class="ai-status"></span>
+            <button type="button" class="btn ghost small" id="aiClose">Đóng</button>
+          </div>
+          <div id="aiBody" class="ai-body"></div>
+        </aside>
+      </div>
+      <div class="modal-hint">Di chuột hoặc ← ↑ → ↓ chọn cung (nối tam hợp · xung chiếu) · <kbd>H</kbd> giờ sinh · <kbd>N</kbd> giới tính · <kbd>A</kbd> âm/dương lịch · <kbd>[</kbd> <kbd>]</kbd> năm xem · <kbd>P</kbd> copy prompt · <kbd>C</kbd> tra cứu · <kbd>Esc</kbd> đóng</div>
+    </div>
+  </div>
+
+  <script src="js/data.js?v=20261028e"></script>
+  <script src="js/myevents.js?v=20261028e"></script>
+  <script src="js/lunar.js?v=20261028e"></script>
+  <script src="js/tuvi.bundle.js?v=20261028e"></script>
+  <script src="js/tuvi-prompt.js?v=20261028e"></script>
+  <script src="js/app.js?v=20261028e"></script>
+  <script src="js/dialogs.js?v=20261028e"></script>
+</body>
+</html>

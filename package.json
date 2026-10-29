@@ -1,0 +1,13 @@
+{
+  "name": "lich-van-nien-tv",
+  "version": "1.0.0",
+  "description": "Lịch Vạn Niên cho Smart TV / điện thoại + Lá số Tử Vi + copy prompt luận giải",
+  "type": "module",
+  "scripts": {
+    "start": "node server/server.js",
+    "build:tuvi": "cd tuvi && npm run build:browser",
+    "test": "cd tuvi && npm test"
+  },
+  "engines": { "node": ">=18" },
+  "license": "MIT"
+}
