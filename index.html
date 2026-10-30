@@ -14,7 +14,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&family=Unbounded:wght@600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css?v=20261030d">
+  <link rel="stylesheet" href="css/style.css?v=20261030e">
 </head>
 <body class="bg-[#14173d] text-slate-100 overflow-hidden">
   <main id="app">
@@ -22,7 +22,7 @@
     <!-- ===== CỘT TRÁI: Thông tin ngày đang chọn ===== -->
     <section id="left">
       <div class="flex items-center justify-between">
-        <div id="eyebrow" class="eyebrow">HÔM NAY</div>
+        <div id="eyebrow" class="status">Hôm nay</div>
         <div id="clock" class="clock">--:--</div>
       </div>
 
@@ -53,12 +53,12 @@
       </div>
 
       <div class="mt-[2.6vh]">
-        <div class="eyebrow">Giờ hoàng đạo</div>
+        <h2 class="section-h">Giờ hoàng đạo</h2>
         <div id="gioHD" class="gio-grid mt-[1vh]"></div>
       </div>
 
       <div class="mt-auto pt-[2vh] min-h-0">
-        <div class="eyebrow">Sắp tới</div>
+        <h2 class="section-h">Sắp tới</h2>
         <ul id="upcoming" class="upcoming mt-[0.8vh]"></ul>
       </div>
     </section>
@@ -73,11 +73,10 @@
         <h1 id="monthTitle" class="month-title">—</h1>
         <div class="hint">
           <div class="tools">
-            <button type="button" class="tool act-goto">Đi tới ngày</button>
-            <button type="button" class="tool act-mine">Ngày của tôi</button>
-            <button type="button" class="tool act-tuvi">Lá số Tử Vi</button>
+            <button type="button" class="tool act-goto" title="Phím G">Đi tới ngày</button>
+            <button type="button" class="tool act-mine" title="Phím N">Ngày của tôi</button>
+            <button type="button" class="tool act-tuvi" title="Phím V">Lá số Tử Vi</button>
           </div>
-          <div><kbd>← ↑ → ↓</kbd> chọn ngày · <kbd>PgUp</kbd>/<kbd>PgDn</kbd> đổi tháng · <kbd>T</kbd> hôm nay · <kbd>G</kbd> đi tới ngày · <kbd>N</kbd> ngày của tôi · <kbd>V</kbd> Tử Vi</div>
         </div>
       </header>
 
@@ -226,12 +225,12 @@
     </div>
   </div>
 
-  <script src="js/data.js?v=20261030d"></script>
-  <script src="js/myevents.js?v=20261030d"></script>
-  <script src="js/lunar.js?v=20261030d"></script>
-  <script src="js/tuvi.bundle.js?v=20261030d"></script>
-  <script src="js/tuvi-prompt.js?v=20261030d"></script>
-  <script src="js/app.js?v=20261030d"></script>
-  <script src="js/dialogs.js?v=20261030d"></script>
+  <script src="js/data.js?v=20261030e"></script>
+  <script src="js/myevents.js?v=20261030e"></script>
+  <script src="js/lunar.js?v=20261030e"></script>
+  <script src="js/tuvi.bundle.js?v=20261030e"></script>
+  <script src="js/tuvi-prompt.js?v=20261030e"></script>
+  <script src="js/app.js?v=20261030e"></script>
+  <script src="js/dialogs.js?v=20261030e"></script>
 </body>
 </html>

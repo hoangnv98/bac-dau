@@ -58,13 +58,8 @@ html, body {
 }
 
 /* ---- Typography ---- */
-.eyebrow {
-  font-size: max(0.76rem, 11px);
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: var(--muted);
-  font-weight: 600;
-}
+.status { font-size: 0.95rem; font-weight: 500; color: var(--muted); }
+.section-h { margin: 0; font-size: 0.95rem; font-weight: 600; color: var(--text); }
 .clock {
   font-size: 0.95rem;
   color: var(--muted);
@@ -95,23 +90,19 @@ html, body {
   border-radius: 999px;
   background: rgba(242, 169, 59, 0.14);
   color: var(--amber);
-  border: 1px solid rgba(242, 169, 59, 0.3);
   white-space: nowrap;
 }
-.tag.solar { background: rgba(255, 128, 128, 0.14); color: var(--red); border-color: rgba(255, 128, 128, 0.3); }
-.tag.mine { background: rgba(126, 219, 168, 0.14); color: var(--green); border-color: rgba(126, 219, 168, 0.3); }
-.tag.moon { background: rgba(169, 176, 255, 0.12); color: var(--accent); border-color: rgba(169, 176, 255, 0.3); }
+.tag.solar { background: rgba(255, 128, 128, 0.14); color: var(--red); }
+.tag.mine { background: rgba(126, 219, 168, 0.14); color: var(--green); }
+.tag.moon { background: rgba(169, 176, 255, 0.12); color: var(--accent); }
 
 /* ---- Giờ hoàng đạo ---- */
-.gio-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.5rem; }
+.gio-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0 1rem; }
 .gio {
   display: flex;
   align-items: baseline;
-  justify-content: space-between;
-  background: var(--cell);
-  border-radius: 0.5rem;
-  padding: 0.45rem 0.7rem;
-  border: 1px solid var(--line);
+  gap: 0.6rem;
+  padding: 0.3rem 0;
 }
 .gio b { font-size: 0.9rem; font-weight: 700; color: var(--green); }
 .gio span { font-size: max(0.75rem, 11px); color: var(--muted); font-variant-numeric: tabular-nums; }
@@ -123,11 +114,9 @@ html, body {
   grid-template-columns: 3.2rem 1fr auto;
   align-items: center;
   gap: 0.6rem;
-  padding: 0.42rem 0;
-  border-top: 1px solid var(--line);
+  padding: 0.4rem 0;
   font-size: 0.85rem;
 }
-.upcoming li:first-child { border-top: 0; }
 .upcoming .date { color: var(--muted); font-variant-numeric: tabular-nums; }
 .upcoming .name { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .upcoming .left { color: var(--accent); font-weight: 600; white-space: nowrap; }
@@ -137,11 +126,6 @@ html, body {
 .cal-header { display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; }
 .month-title { font-family: var(--font-display); font-size: 1.55rem; font-weight: 700; margin: 0; letter-spacing: -0.01em; }
 .hint { text-align: right; font-size: max(0.76rem, 11px); color: var(--dim); }
-.hint .dot { display: inline-block; width: 0.55rem; height: 0.55rem; border-radius: 50%; background: var(--yellow); vertical-align: middle; margin-right: 0.25rem; }
-.hint kbd {
-  font: inherit; color: var(--muted); background: var(--cell); border: 1px solid var(--line);
-  border-radius: 0.3rem; padding: 0.05rem 0.35rem; margin: 0 0.1rem;
-}
 
 /* ---- Logo Bắc Đẩu ---- */
 .brand { display: flex; align-items: center; gap: 0.7rem; min-width: 0; }
@@ -287,7 +271,7 @@ html, body {
     font-weight: 600;
     color: var(--text);
     background: var(--cell);
-    border: 1px solid var(--line);
+    border: 0;
     border-radius: 0.6rem;
     padding: 0.55rem 0.8rem;
     min-height: 2.6rem;
@@ -338,7 +322,6 @@ html, body {
   .row { gap: 0.8rem; }
   .info-line { font-size: max(0.82rem, 11px); }
   .gio-grid { grid-template-columns: repeat(3, 1fr); gap: 0.4rem; }
-  .gio { padding: 0.4rem 0.55rem; }
   .upcoming li { grid-template-columns: 3rem 1fr auto; font-size: max(0.82rem, 11px); }
 }
 
@@ -358,13 +341,12 @@ html, body {
   padding: 0.3rem 0.7rem; cursor: pointer; -webkit-tap-highlight-color: transparent;
 }
 .tool:hover, .btn:hover { background: var(--cell-hover); }
+.tool { background: transparent; border-color: transparent; color: var(--muted); }
+.tool:hover { color: var(--text); }
 .btn { font-size: 0.9rem; padding: 0.55rem 1.1rem; border-radius: 0.6rem; }
 .btn.primary { background: var(--amber); color: #1b1e52; border-color: transparent; }
 .btn.primary:disabled { opacity: 0.4; cursor: not-allowed; }
 .btn.ghost { background: transparent; }
-.hint .dot.y { background: var(--yellow); }
-.hint .dot.g { background: var(--green); }
-.hint .dot.b { background: var(--accent); }
 .mobile-bar .act-goto, .mobile-bar .act-tuvi { grid-column: span 1; }
 .mobile-bar .act-goto { grid-column: 1 / 2; }
 .mobile-bar .act-mine { grid-column: 2 / 3; }
@@ -542,7 +524,6 @@ body.modal-open #app { filter: blur(6px) brightness(0.6); }
 /* =====================================================================
    LÁ SỐ TỬ VI – bố cục kiểu aituvi (nền sáng)
    ===================================================================== */
-.hint .dot.r { background: #ef5350; }
 .tuvi-box { background: #ffffff; color: #23275c; border-color: #dfe1f2; }
 .tuvi-box .modal-title { color: #1b1e52; }
 .tuvi-box .modal-hint { color: #5c6096; }

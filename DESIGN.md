@@ -163,7 +163,8 @@ Bảng màu đêm Chàm, với một ngôi sao Hổ phách và vài màu ngữ n
 - **Headline** (700, 1.55rem, 1.2): tiêu đề tháng. Tiêu đề hộp thoại dùng cùng font, cỡ 1.2rem; tên "Bắc Đẩu" ở header dùng cỡ 1.2rem, độ đậm 800.
 - **Title** (600, 1.4rem, 1.2): thứ trong tuần, tên tháng âm.
 - **Body** (400, 0.85rem, 1.5): Can Chi, Hoàng đạo, danh sách sắp tới, sự kiện trong tháng.
-- **Label** (600, max(0.76rem, 11px), chữ hoa, giãn 0.2em): nhãn khu vực ("GIỜ HOÀNG ĐẠO", "SẮP TỚI"), nhãn ô nhập.
+- **Section** (600, 0.95rem, chữ thường, màu Sương): tiêu đề khu vực ("Giờ hoàng đạo", "Sắp tới"). Trạng thái "Hôm nay / Đang xem" cùng cỡ, độ đậm 500, màu Sương mờ.
+- **Label** (600, max(0.76rem, 11px), chữ hoa, giãn 0.1em): chỉ dùng cho nhãn ô nhập trong hộp thoại.
 - Số ô lịch dùng Unbounded 600, 1.35rem.
 
 ### Named Rules
@@ -226,7 +227,7 @@ Tinh gọn, tối giản: thành phần lùi lại để số liệu nói. Thêm
 - **Trên nền sáng (lá số):** Primary là nền Chàm, chữ trắng; nút thường nền Sương.
 
 ### Chips
-- **Thẻ sự kiện:** bo tròn hai đầu, nền 14% và viền 30% của màu ngữ nghĩa. Hổ phách cho lễ âm lịch, Son cho lễ dương lịch, Ngọc cho Ngày của tôi, Ánh sao lam cho mùng 1 và rằm.
+- **Thẻ sự kiện:** bo tròn hai đầu, nền 14% của màu ngữ nghĩa, không viền. Hổ phách cho lễ âm lịch, Son cho lễ dương lịch, Ngọc cho Ngày của tôi, Ánh sao lam cho mùng 1 và rằm.
 - **Phân đoạn (Dương lịch / Âm lịch):** nền Chàm khuya, mục đang bật có nền Ánh sao lam 16% và chữ Ánh sao lam.
 
 ### Cards / Containers
@@ -234,7 +235,7 @@ Tinh gọn, tối giản: thành phần lùi lại để số liệu nói. Thêm
   - Chủ nhật và ngày lễ: số màu Son.
   - Hôm nay: số và vòng viền Hổ phách.
   - Tháng khác: nền nhạt hơn, số màu Khói Chàm.
-- **Giờ hoàng đạo:** thẻ nhỏ bo 0.5rem, tên giờ màu Ngọc, khung giờ màu Sương mờ.
+- **Giờ hoàng đạo:** danh sách 3 cột không khung, tên giờ màu Ngọc đậm, khung giờ màu Sương mờ ngay bên cạnh.
 - **Hộp thoại:** nền Đêm Chàm, bo 1rem, đệm 1.6rem × 1.8rem. Trên điện thoại trượt lên từ đáy, chỉ bo hai góc trên.
 
 ### Inputs / Fields
@@ -243,8 +244,8 @@ Tinh gọn, tối giản: thành phần lùi lại để số liệu nói. Thêm
 - **Ô đang chọn bằng remote** (hộp thoại Đi tới ngày): viền trắng 2px cùng quầng trắng.
 
 ### Navigation
-- Không có thanh điều hướng. Header gồm logo chòm sao kèm "Bắc Đẩu / Tử vi · Lịch vạn niên", tiêu đề tháng, ba nút công cụ (Đi tới ngày, Ngày của tôi, Lá số Tử Vi) và dòng gợi ý phím có `kbd`.
-- Trên điện thoại, logo nằm giữa và thanh nút chạm 3×2 thay cho gợi ý phím.
+- Không có thanh điều hướng. Header gồm logo chòm sao kèm "Bắc Đẩu / Tử vi · Lịch vạn niên", tiêu đề tháng, ba nút công cụ (Đi tới ngày, Ngày của tôi, Lá số Tử Vi) dạng chữ không khung (Sương mờ, rê chuột sáng lên Sương). Phím tắt nằm trong chú thích khi rê chuột (`title`), không in thành dòng gợi ý.
+- Trên điện thoại, logo nằm giữa và thanh nút chạm 3×2 (nền Chàm khuya, không viền) thay cho nút công cụ.
 
 ### Lá số Tử Vi (signature)
 - Bản đồ sao nền Giấy trắng, lưới kẻ Viền Sương.
@@ -262,6 +263,7 @@ Tinh gọn, tối giản: thành phần lùi lại để số liệu nói. Thêm
 - **Do** viết mọi cỡ chữ dưới 0.84rem dạng `max(Xrem, 11px)`.
 - **Do** kiểm tra tương phản 4,5:1 trên nền thật, gồm cả nền Sương ấm của cung Mệnh và nền ô đang chọn.
 - **Do** tạo thứ bậc bằng màu chữ, độ đậm và khoảng trống trước khi nghĩ tới viền hay nền.
+- **Do** viết tiêu đề khu vực bằng chữ thường; không đặt nhãn chữ hoa giãn cách phía trên tiêu đề hay con số.
 - **Do** để lá số tự giãn theo nội dung và cuộn được, thay vì cắt bớt sao.
 
 ### Don't:

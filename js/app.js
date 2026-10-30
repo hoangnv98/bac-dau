@@ -140,7 +140,7 @@
     var info = dayInfo(state.focusJd);
     var lu = info.lunar;
 
-    $('eyebrow').textContent = info.jd === state.todayJd ? 'HÔM NAY' : 'ĐANG XEM';
+    $('eyebrow').textContent = info.jd === state.todayJd ? 'Hôm nay' : 'Đang xem';
     $('solarDay').textContent = info.d;
     $('weekday').textContent = D.WEEKDAYS[info.weekday];
     $('solarMY').textContent = 'Tháng ' + info.m + ', ' + info.y;
