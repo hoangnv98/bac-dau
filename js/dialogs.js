@@ -420,11 +420,13 @@
       });
     } catch (err) {
       tuvi.laSo = null;
+      $('btnCopyPrompt').disabled = true;
       $('tuviBoard').innerHTML = '<div class="av-error"><b>' + esc(err.message) + '</b><br>' +
         (tuvi.cal === 'lunar' ? 'Chuyển "Ngày sinh" sang Dương lịch, hoặc đóng lá số và chọn một ngày khác trên lịch.' : 'Đóng lá số và chọn một ngày khác trên lịch.') + '</div>';
       return;
     }
     tuvi.laSo = ls;
+    $('btnCopyPrompt').disabled = false;
     saveTuViPrefs();
     var t = ls.tongQuan, al = ls.amLich, dl = ls.duongLich, html = '';
 
@@ -496,6 +498,8 @@
     return '<span class="lk-sao ' + (HANH_CLASS[s.hanh] || '') + (hit ? ' hit' : '') + (extra || '') + '" data-sao="' + esc(s.ten) + '">' + esc(saoLabel(s)) + '</span>';
   }
 
+  var CHEVRON = '<svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2.5 4.5 6 8l3.5-3.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+
   /* Bỏ dấu tiếng Việt để tìm "thai duong" vẫn ra "Thái Dương" */
   function boDau(str) {
     if (!str.normalize) return str.toLowerCase();
@@ -539,7 +543,7 @@
         '</div>' +
         '<div class="lk-chinh">' + (ct.length ? ct.map(function (s) { return saoSpan(s); }).join(', ') : '<span class="lk-vcd">Vô chính diệu</span>') + '</div>' +
         '<div class="lk-phu">' + pt.map(function (s) { return saoSpan(s); }).join(', ') + '</div>' +
-        '<button type="button" class="lk-toggle" data-chi="' + c.viTri + '">' + (isOpen ? '▴ Thu gọn' : '▾ Xem ý nghĩa các sao') + '</button>' +
+        '<button type="button" class="lk-toggle' + (isOpen ? ' is-open' : '') + '" data-chi="' + c.viTri + '" aria-expanded="' + isOpen + '">' + CHEVRON + (isOpen ? 'Thu gọn' : 'Xem ý nghĩa các sao') + '</button>' +
         '<div class="lk-detail"' + (isOpen ? '' : ' hidden') + '>' + detail + '</div>' +
         '</div>';
     });

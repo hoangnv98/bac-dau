@@ -200,6 +200,8 @@ Hệ thống phẳng, chiều sâu bằng các lớp màu: Đêm sâu, rồi Đ�
 ### Named Rules
 **The Flat-By-Default Rule.** Bề mặt phẳng khi đứng yên. Độ nổi chỉ dành cho trạng thái (đang chọn, hộp thoại đang mở).
 
+**The Owned Browser Rule.** Bôi đen chữ dùng nền Hổ phách sáng chữ Đêm Chàm (nền tối) hoặc nền Chàm chữ Sương (nền sáng); thanh cuộn tô màu Chàm khuya sáng hoặc #c9cce6. Không để màu mặc định của trình duyệt.
+
 ## Shapes
 
 Bo góc vừa phải, nhất quán:
@@ -225,6 +227,9 @@ Tinh gọn, tối giản: thành phần lùi lại để số liệu nói. Thêm
 - **Ghost:** không nền, chỉ chữ, dùng cho "Đóng" và hành động phụ.
 - **Danger:** chữ và viền Son. Xóa phải bấm hai lần (lần đầu nút đổi thành "Xóa?").
 - **Trên nền sáng (lá số):** Primary là nền Chàm, chữ trắng; nút thường nền Sương.
+- **Disabled (nền sáng):** nền Viền Sương, chữ Mực Chàm nhạt; ví dụ Copy prompt khi lá số lỗi.
+- **Focus bàn phím (mọi thành phần):** viền ngoài 2px cách 2px, Ánh sao lam trên nền tối, Chàm trên nền sáng.
+- **Chiều cao:** ô nhập, ô chọn, nút phân đoạn và nút trên đầu lá số cùng cao 2.4rem để nhãn thẳng hàng.
 
 ### Chips
 - **Thẻ sự kiện:** bo tròn hai đầu, nền 14% của màu ngữ nghĩa, không viền. Hổ phách cho lễ âm lịch, Son cho lễ dương lịch, Ngọc cho Ngày của tôi, Ánh sao lam cho mùng 1 và rằm.
