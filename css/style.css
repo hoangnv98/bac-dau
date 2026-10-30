@@ -452,7 +452,6 @@ body.modal-open #app { filter: blur(6px) brightness(0.6); }
 .tuvi-box { width: 100%; height: 100%; display: flex; flex-direction: column; padding: 1.2rem 1.4rem; overflow: auto; }
 .tuvi-top { display: flex; justify-content: space-between; align-items: center; gap: 1rem; flex-wrap: wrap; }
 .tuvi-top .modal-title { margin: 0; }
-.tuvi-date { font-size: 0.9rem; font-weight: 500; color: var(--muted); margin-left: 0.6rem; }
 .tuvi-controls { display: flex; align-items: flex-end; gap: 0.6rem; }
 .tuvi-controls .seg { align-self: flex-end; margin-bottom: 0.3rem; }
 .tuvi-controls .btn { margin-bottom: 0.5rem; }
@@ -598,7 +597,9 @@ body.modal-open #app { filter: blur(6px) brightness(0.6); }
 .av-links line.xung { stroke: #bf7310; stroke-dasharray: 6 4; }
 .av-legend { display: flex; justify-content: space-between; gap: 1rem; font-size: max(0.66rem, 11px); color: #3b3f70; padding: 0.35rem 0.1rem 0; flex-wrap: wrap; }
 .av-legend i { font-style: normal; margin: 0 0.1rem 0 0.5rem; }
-.av-error { grid-column: 1 / -1; grid-row: 1 / -1; color: #dc2626; padding: 1rem; }
+.av-error { grid-column: 1 / -1; grid-row: 1 / -1; color: #1b1e52; padding: 1.5rem; font-size: 0.95rem; line-height: 1.6; }
+.av-error b { color: #c81e1e; }
+#tuviDob { letter-spacing: 0.04em; color: #1b1e52; }
 
 /* Bảng Copy prompt */
 .ai-panel { width: 34%; min-width: 18rem; display: flex; flex-direction: column; border: 1px solid #dfe1f2; border-radius: 0.6rem; background: #f7f8fd; color: #23275c; min-height: 0; }

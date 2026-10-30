@@ -14,7 +14,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&family=Unbounded:wght@600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css?v=20261030f">
+  <link rel="stylesheet" href="css/style.css?v=20261030g">
 </head>
 <body class="bg-[#14173d] text-slate-100 overflow-hidden">
   <main id="app">
@@ -177,7 +177,7 @@
         </div>
         <div class="tuvi-controls">
           <label class="field"><span>Họ tên</span><input id="tuviName" type="text" placeholder="Tùy chọn" autocomplete="off"></label>
-          <div class="field"><span>Ngày sinh</span>
+          <div class="field"><span>Ngày sinh <b id="tuviDob" title="Lấy theo ngày đang chọn trên lịch. Muốn đổi, đóng lá số rồi chọn ngày khác (phím G).">—</b> là ngày</span>
             <div class="seg" id="tuviCal" title="Phím A">
               <button type="button" class="seg-btn is-on" data-cal="solar">Dương lịch</button>
               <button type="button" class="seg-btn" data-cal="lunar">Âm lịch</button>
@@ -206,7 +206,7 @@
         <div id="tuviLookup" class="lk" hidden>
           <aside class="lk-side">
             <div class="lk-side-title">Tra cứu nhanh</div>
-            <input id="lkSearch" type="search" placeholder="Tìm kiếm sao" autocomplete="off">
+            <input id="lkSearch" type="search" placeholder="Tìm sao, VD: thai duong" autocomplete="off">
             <div class="lk-group"><div class="lk-group-title">Chính tinh</div><ul id="lkChinh"></ul></div>
             <div class="lk-group"><div class="lk-group-title">Phụ tinh</div><ul id="lkPhu"></ul></div>
           </aside>
@@ -221,16 +221,16 @@
           <div id="aiBody" class="ai-body"></div>
         </aside>
       </div>
-      <div class="modal-hint">Rê chuột hoặc chạm vào một cung để thấy tam hợp và xung chiếu</div>
+      <div class="modal-hint">Rê chuột hoặc chạm vào một cung để thấy tam hợp và xung chiếu. Muốn đổi ngày sinh, đóng lá số rồi chọn ngày khác trên lịch.</div>
     </div>
   </div>
 
-  <script src="js/data.js?v=20261030f"></script>
-  <script src="js/myevents.js?v=20261030f"></script>
-  <script src="js/lunar.js?v=20261030f"></script>
-  <script src="js/tuvi.bundle.js?v=20261030f"></script>
-  <script src="js/tuvi-prompt.js?v=20261030f"></script>
-  <script src="js/app.js?v=20261030f"></script>
-  <script src="js/dialogs.js?v=20261030f"></script>
+  <script src="js/data.js?v=20261030g"></script>
+  <script src="js/myevents.js?v=20261030g"></script>
+  <script src="js/lunar.js?v=20261030g"></script>
+  <script src="js/tuvi.bundle.js?v=20261030g"></script>
+  <script src="js/tuvi-prompt.js?v=20261030g"></script>
+  <script src="js/app.js?v=20261030g"></script>
+  <script src="js/dialogs.js?v=20261030g"></script>
 </body>
 </html>

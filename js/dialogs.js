@@ -406,6 +406,7 @@
 
   function renderTuVi() {
     var sd = L.jdToDate(tuvi.jd);
+    $('tuviDob').textContent = pad2(sd[0]) + '/' + pad2(sd[1]) + '/' + sd[2];
     $('tuviHour').value = tuvi.hourChi;
     $('tuviYear').value = tuvi.viewedYear;
     qsa('#tuviGender .seg-btn').forEach(function (b) { b.classList.toggle('is-on', b.getAttribute('data-gender') === tuvi.gender); });
@@ -419,7 +420,8 @@
       });
     } catch (err) {
       tuvi.laSo = null;
-      $('tuviBoard').innerHTML = '<div class="av-error">' + esc(err.message) + '</div>';
+      $('tuviBoard').innerHTML = '<div class="av-error"><b>' + esc(err.message) + '</b><br>' +
+        (tuvi.cal === 'lunar' ? 'Chuyển "Ngày sinh" sang Dương lịch, hoặc đóng lá số và chọn một ngày khác trên lịch.' : 'Đóng lá số và chọn một ngày khác trên lịch.') + '</div>';
       return;
     }
     tuvi.laSo = ls;
@@ -494,6 +496,12 @@
     return '<span class="lk-sao ' + (HANH_CLASS[s.hanh] || '') + (hit ? ' hit' : '') + (extra || '') + '" data-sao="' + esc(s.ten) + '">' + esc(saoLabel(s)) + '</span>';
   }
 
+  /* Bỏ dấu tiếng Việt để tìm "thai duong" vẫn ra "Thái Dương" */
+  function boDau(str) {
+    if (!str.normalize) return str.toLowerCase();
+    return str.normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/đ/g, 'd').replace(/Đ/g, 'D').toLowerCase();
+  }
+
   function renderLookup() {
     var ls = tuvi.laSo; if (!ls) return;
     var T = window.TuVi;
@@ -504,13 +512,14 @@
     var chinh = [], phu = [];
     cungs.forEach(function (c) {
       c.sao.forEach(function (s) {
-        if (q && s.ten.toLowerCase().indexOf(q) === -1) return;
+        if (q && boDau(s.ten).indexOf(q) === -1) return;
         var item = '<li><button type="button" class="lk-link ' + (HANH_CLASS[s.hanh] || '') + '" data-sao="' + esc(s.ten) + '" data-chi="' + c.viTri + '">' + esc(saoLabel(s)) + '<small>' + esc(c.ten) + '</small></button></li>';
         (s.loai === 'chính tinh' ? chinh : phu).push(item);
       });
     });
-    $('lkChinh').innerHTML = chinh.join('') || '<li class="lk-empty">Không có</li>';
-    $('lkPhu').innerHTML = phu.join('') || '<li class="lk-empty">Không có</li>';
+    var none = '<li class="lk-empty">' + (q ? 'Không có sao nào khớp' : 'Không có') + '</li>';
+    $('lkChinh').innerHTML = chinh.join('') || none;
+    $('lkPhu').innerHTML = phu.join('') || none;
 
     // Cột phải: thẻ 12 cung
     var html = '';
@@ -530,7 +539,7 @@
         '</div>' +
         '<div class="lk-chinh">' + (ct.length ? ct.map(function (s) { return saoSpan(s); }).join(', ') : '<span class="lk-vcd">Vô chính diệu</span>') + '</div>' +
         '<div class="lk-phu">' + pt.map(function (s) { return saoSpan(s); }).join(', ') + '</div>' +
-        '<button type="button" class="lk-toggle" data-chi="' + c.viTri + '">' + (isOpen ? '▴ Thu gọn' : '▾ Ý nghĩa các sao') + '</button>' +
+        '<button type="button" class="lk-toggle" data-chi="' + c.viTri + '">' + (isOpen ? '▴ Thu gọn' : '▾ Xem ý nghĩa các sao') + '</button>' +
         '<div class="lk-detail"' + (isOpen ? '' : ' hidden') + '>' + detail + '</div>' +
         '</div>';
     });
@@ -539,7 +548,7 @@
 
   function bindLookup() {
     qsa('#tuviTabs .tab-btn').forEach(function (b) { b.addEventListener('click', function () { setTab(b.getAttribute('data-tab')); }); });
-    $('lkSearch').addEventListener('input', function () { lookup.query = $('lkSearch').value.trim().toLowerCase(); renderLookup(); });
+    $('lkSearch').addEventListener('input', function () { lookup.query = boDau($('lkSearch').value.trim()); renderLookup(); });
     $('tuviLookup').addEventListener('click', function (e) {
       var t = e.target;
       while (t && t !== this && !(t.getAttribute && (t.classList.contains('lk-toggle') || t.classList.contains('lk-link') || t.classList.contains('lk-copy')))) t = t.parentNode;
@@ -761,7 +770,7 @@
       $('aiPanel').hidden = false;
       $('aiBody').innerHTML =
         '<div class="ai-copy">' +
-        '<p>Gồm <b>prompt luận giải</b> và <b>toàn bộ dữ liệu lá số</b>' + (label ? ' (chỉ luận ' + esc(label) + ')' : '') + ' · ' + text.length.toLocaleString('vi-VN') + ' ký tự. Dán vào:</p>' +
+        '<p>Gồm <b>prompt luận giải</b> và <b>toàn bộ dữ liệu lá số</b>' + (label ? ' (chỉ luận ' + esc(label) + ')' : '') + ' · ' + text.length.toLocaleString('vi-VN') + ' ký tự. Mở một trang dưới đây và dán vào ô chat:</p>' +
         '<div class="ai-copy-links">' +
         '<a class="btn ghost small" href="https://gemini.google.com/app" target="_blank" rel="noopener">Gemini ↗</a>' +
         '<a class="btn ghost small" href="https://chatgpt.com/" target="_blank" rel="noopener">ChatGPT ↗</a>' +
