@@ -202,9 +202,9 @@ html, body {
 .cell.other { opacity: 0.32; }
 .cell.other:hover { opacity: 0.6; }
 
-.cell.today { background: var(--accent-bg); }
-.cell.today .solar { color: var(--accent); }
-.cell.today .lunar { color: #cdd2ff; }
+.cell.today { box-shadow: inset 0 0 0 2px rgba(242, 169, 59, 0.85); }
+.cell.today .solar { color: var(--amber); }
+.cell.today .lunar { color: #f8cf8a; }
 
 .cell.selected { border-color: rgba(169, 176, 255, 0.7); }
 .cell.focus {
