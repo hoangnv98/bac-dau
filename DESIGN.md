@@ -168,7 +168,7 @@ Bảng màu đêm Chàm, với một ngôi sao Hổ phách và vài màu ngữ n
 - Số ô lịch dùng Unbounded 600, 1.35rem.
 
 ### Named Rules
-**The 11px Floor Rule.** Không chữ nào nhỏ hơn 11px trên bất kỳ màn hình nào: mọi cỡ dưới 0.84rem viết dạng `max(Xrem, 11px)`.
+**The 11px Floor Rule.** Không chữ nào nhỏ hơn 11px trên bất kỳ màn hình nào: mọi cỡ dưới 1rem viết dạng `max(Xrem, 11px)`.
 
 **The Display-for-Numbers Rule.** Unbounded dành cho con số và tiêu đề. Không dùng cho đoạn văn, nút hay nhãn.
 
@@ -239,7 +239,8 @@ Tinh gọn, tối giản: thành phần lùi lại để số liệu nói. Thêm
 - **Ô ngày:** nền Chàm khuya, bo 0.65rem, đệm 0.5rem × 0.65rem. Số dương ở góc trên trái (Unbounded), số âm ở góc dưới phải, tên sự kiện ở giữa.
   - Chủ nhật và ngày lễ: số màu Son.
   - Hôm nay: số và vòng viền Hổ phách.
-  - Tháng khác: nền nhạt hơn, số màu Khói Chàm.
+  - Tháng khác: không nền, chỉ một nét viền mảnh Sương 8%, số màu Khói Chàm.
+  - Chấm Ngọc cạnh số là ngày hoàng đạo; chú giải "● Ngày hoàng đạo" nằm cuối dòng sự kiện trong tháng.
 - **Giờ hoàng đạo:** danh sách 3 cột không khung, tên giờ màu Ngọc đậm, khung giờ màu Sương mờ ngay bên cạnh.
 - **Hộp thoại:** nền Đêm Chàm, bo 1rem, đệm 1.6rem × 1.8rem. Trên điện thoại trượt lên từ đáy, chỉ bo hai góc trên.
 
@@ -249,7 +250,7 @@ Tinh gọn, tối giản: thành phần lùi lại để số liệu nói. Thêm
 - **Ô đang chọn bằng remote** (hộp thoại Đi tới ngày): viền trắng 2px cùng quầng trắng.
 
 ### Navigation
-- Không có thanh điều hướng. Header gồm logo chòm sao kèm "Bắc Đẩu / Tử vi · Lịch vạn niên", tiêu đề tháng, ba nút công cụ (Đi tới ngày, Ngày của tôi, Lá số Tử Vi) dạng chữ không khung (Sương mờ, rê chuột sáng lên Sương). Phím tắt nằm trong chú thích khi rê chuột (`title`), không in thành dòng gợi ý.
+- Không có thanh điều hướng. Header là một hàng tự xuống dòng khi thiếu chỗ: logo chòm sao kèm "Bắc Đẩu / Tử vi · Lịch vạn niên" (dưới 1180px ẩn dòng phụ), tiêu đề tháng kẹp giữa hai nút mũi tên tròn (SVG, không nền, rê chuột hiện nền Chàm khuya), rồi các nút công cụ. "Hôm nay" là nút công cụ đầu tiên, chữ Hổ phách sáng; ba nút còn lại (Đi tới ngày, Ngày của tôi, Lá số Tử Vi) dạng chữ không khung (Sương mờ, rê chuột sáng lên Sương). Phím tắt nằm trong chú thích khi rê chuột (`title`), không in thành dòng gợi ý.
 - Trên điện thoại, logo nằm giữa và thanh nút chạm 3×2 (nền Chàm khuya, không viền) thay cho nút công cụ.
 
 ### Lá số Tử Vi (signature)
@@ -267,7 +268,7 @@ Tinh gọn, tối giản: thành phần lùi lại để số liệu nói. Thêm
 
 ### Do:
 - **Do** dùng Hổ phách sáng (#f2a93b) cho đúng một ý mỗi chỗ: hôm nay, ngày âm, hành động chính.
-- **Do** viết mọi cỡ chữ dưới 0.84rem dạng `max(Xrem, 11px)`.
+- **Do** viết mọi cỡ chữ dưới 1rem dạng `max(Xrem, 11px)`.
 - **Do** kiểm tra tương phản 4,5:1 trên nền thật, gồm cả nền Sương ấm của cung Mệnh và nền ô đang chọn.
 - **Do** tạo thứ bậc bằng màu chữ, độ đậm và khoảng trống trước khi nghĩ tới viền hay nền.
 - **Do** viết tiêu đề khu vực bằng chữ thường; không đặt nhãn chữ hoa giãn cách phía trên tiêu đề hay con số.

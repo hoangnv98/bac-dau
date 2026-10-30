@@ -238,7 +238,8 @@
         html += '<span class="' + e.type + '-ev"><b>' + pad2(info.d) + '/' + pad2(info.m) + '</b>' + esc(e.name) + '</span>';
       }
     }
-    $('monthEvents').innerHTML = html || '<span class="empty">Không có sự kiện nổi bật trong tháng.</span>';
+    $('monthEvents').innerHTML = (html || '<span class="empty">Không có sự kiện nổi bật trong tháng.</span>') +
+      '<span class="legend-hd"><i class="hd"></i>Ngày hoàng đạo</span>';
   }
 
   function renderAll() {
@@ -345,6 +346,9 @@
     $('btnPrev').addEventListener('click', function () { shiftMonth(-1); });
     $('btnNext').addEventListener('click', function () { shiftMonth(1); });
     $('btnToday').addEventListener('click', goToday);
+    $('navPrev').addEventListener('click', function () { shiftMonth(-1); });
+    $('navNext').addEventListener('click', function () { shiftMonth(1); });
+    $('navToday').addEventListener('click', goToday);
 
     var grid = $('grid'), startX = 0, startY = 0, tracking = false;
     grid.addEventListener('touchstart', function (e) {

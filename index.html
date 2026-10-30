@@ -14,7 +14,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&family=Unbounded:wght@600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css?v=20261030h">
+  <link rel="stylesheet" href="css/style.css?v=20261030j">
 </head>
 <body class="bg-[#14173d] text-slate-100 overflow-hidden">
   <main id="app">
@@ -70,9 +70,14 @@
           <img src="img/mark-light.svg" alt="">
           <div><b class="brand-name">Bắc Đẩu</b><small class="brand-sub">Tử vi · Lịch vạn niên</small></div>
         </div>
-        <h1 id="monthTitle" class="month-title">—</h1>
+        <div class="month-nav">
+          <button type="button" class="nav-btn" id="navPrev" aria-label="Tháng trước" title="Tháng trước (PgUp)"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M10 3.5 5.5 8l4.5 4.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+          <h1 id="monthTitle" class="month-title">—</h1>
+          <button type="button" class="nav-btn" id="navNext" aria-label="Tháng sau" title="Tháng sau (PgDn)"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M6 3.5 10.5 8 6 12.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        </div>
         <div class="hint">
           <div class="tools">
+            <button type="button" class="tool tool-today" id="navToday" title="Phím T">Hôm nay</button>
             <button type="button" class="tool act-goto" title="Phím G">Đi tới ngày</button>
             <button type="button" class="tool act-mine" title="Phím N">Ngày của tôi</button>
             <button type="button" class="tool act-tuvi" title="Phím V">Lá số Tử Vi</button>
@@ -225,12 +230,12 @@
     </div>
   </div>
 
-  <script src="js/data.js?v=20261030h"></script>
-  <script src="js/myevents.js?v=20261030h"></script>
-  <script src="js/lunar.js?v=20261030h"></script>
-  <script src="js/tuvi.bundle.js?v=20261030h"></script>
-  <script src="js/tuvi-prompt.js?v=20261030h"></script>
-  <script src="js/app.js?v=20261030h"></script>
-  <script src="js/dialogs.js?v=20261030h"></script>
+  <script src="js/data.js?v=20261030j"></script>
+  <script src="js/myevents.js?v=20261030j"></script>
+  <script src="js/lunar.js?v=20261030j"></script>
+  <script src="js/tuvi.bundle.js?v=20261030j"></script>
+  <script src="js/tuvi-prompt.js?v=20261030j"></script>
+  <script src="js/app.js?v=20261030j"></script>
+  <script src="js/dialogs.js?v=20261030j"></script>
 </body>
 </html>
