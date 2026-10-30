@@ -1,0 +1,523 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-30T14:47:15+07:00",
+  "title": "Design System: Bắc Đẩu",
+  "extensions": {
+    "colorMeta": {
+      "cham": {
+        "role": "primary",
+        "displayName": "Chàm",
+        "canonical": "#2A2E86",
+        "tonalRamp": [
+          "#141529",
+          "#22244e",
+          "#2e3175",
+          "#393eac",
+          "#6064c8",
+          "#9a9cd6",
+          "#cbcce6",
+          "#eeeff6"
+        ]
+      },
+      "ho-phach": {
+        "role": "primary",
+        "displayName": "Hổ phách",
+        "canonical": "#BF7310",
+        "tonalRamp": [
+          "#30210e",
+          "#5c3d15",
+          "#8b5918",
+          "#cf7f16",
+          "#e89f40",
+          "#e8be87",
+          "#efdcc3",
+          "#f9f3ec"
+        ]
+      },
+      "ho-phach-sang": {
+        "role": "primary",
+        "displayName": "Hổ phách sáng",
+        "canonical": "#f2a93b",
+        "tonalRamp": [
+          "#30220d",
+          "#5d4013",
+          "#8d5e16",
+          "#d38613",
+          "#eba53d",
+          "#eac285",
+          "#f0ddc2",
+          "#f9f4ec"
+        ]
+      },
+      "anh-sao-lam": {
+        "role": "secondary",
+        "displayName": "Ánh sao lam",
+        "canonical": "#a9b0ff",
+        "tonalRamp": [
+          "#0a0e33",
+          "#0e1562",
+          "#0d1896",
+          "#0517e0",
+          "#3141f7",
+          "#7e88f1",
+          "#bfc3f3",
+          "#ebecfa"
+        ]
+      },
+      "suong": {
+        "role": "neutral",
+        "displayName": "Sương",
+        "canonical": "#EEF0FA",
+        "tonalRamp": [
+          "#14172a",
+          "#21294f",
+          "#2c3977",
+          "#374baf",
+          "#5e70ca",
+          "#98a3d7",
+          "#cacfe7",
+          "#eeeff6"
+        ]
+      },
+      "dem-sau": {
+        "role": "neutral",
+        "displayName": "Đêm sâu",
+        "canonical": "#14173d",
+        "tonalRamp": [
+          "#141629",
+          "#23264d",
+          "#2f3474",
+          "#3b43aa",
+          "#6269c6",
+          "#9b9fd5",
+          "#cbcde6",
+          "#eeeff6"
+        ]
+      },
+      "dem-cham": {
+        "role": "neutral",
+        "displayName": "Đêm Chàm",
+        "canonical": "#1b1e52",
+        "tonalRamp": [
+          "#141629",
+          "#23254d",
+          "#2f3374",
+          "#3b41aa",
+          "#6267c6",
+          "#9b9ed4",
+          "#cccde6",
+          "#eeeff6"
+        ]
+      },
+      "cham-khuya": {
+        "role": "neutral",
+        "displayName": "Chàm khuya",
+        "canonical": "#22266a",
+        "tonalRamp": [
+          "#141529",
+          "#23254e",
+          "#2e3275",
+          "#3a41ab",
+          "#6166c7",
+          "#9a9dd5",
+          "#cbcde6",
+          "#eeeff6"
+        ]
+      },
+      "cham-khuya-hover": {
+        "role": "neutral",
+        "displayName": "Chàm khuya sáng",
+        "canonical": "#2b307a",
+        "tonalRamp": [
+          "#151628",
+          "#24274c",
+          "#313572",
+          "#3e45a7",
+          "#646ac3",
+          "#9ca0d3",
+          "#cccee5",
+          "#efeff6"
+        ]
+      },
+      "suong-mo": {
+        "role": "neutral",
+        "displayName": "Sương mờ",
+        "canonical": "#a2a6d2",
+        "tonalRamp": [
+          "#181926",
+          "#2a2c47",
+          "#3a3e69",
+          "#4d5399",
+          "#7177b6",
+          "#a4a7cc",
+          "#d0d1e2",
+          "#f0f0f5"
+        ]
+      },
+      "khoi-cham": {
+        "role": "neutral",
+        "displayName": "Khói Chàm",
+        "canonical": "#8489c0",
+        "tonalRamp": [
+          "#181925",
+          "#2b2d46",
+          "#3c3f68",
+          "#4f5596",
+          "#7479b4",
+          "#a5a8ca",
+          "#d0d2e1",
+          "#f0f0f5"
+        ]
+      },
+      "giay-trang": {
+        "role": "neutral",
+        "displayName": "Giấy trắng",
+        "canonical": "#ffffff",
+        "tonalRamp": [
+          "#1f1f1f",
+          "#383838",
+          "#525252",
+          "#737373",
+          "#949494",
+          "#b8b8b8",
+          "#d9d9d9",
+          "#f2f2f2"
+        ]
+      },
+      "muc-cham": {
+        "role": "neutral",
+        "displayName": "Mực Chàm",
+        "canonical": "#1b1e52",
+        "tonalRamp": [
+          "#141629",
+          "#23254d",
+          "#2f3374",
+          "#3b41aa",
+          "#6267c6",
+          "#9b9ed4",
+          "#cccde6",
+          "#eeeff6"
+        ]
+      },
+      "muc-cham-nhat": {
+        "role": "neutral",
+        "displayName": "Mực Chàm nhạt",
+        "canonical": "#5c6096",
+        "tonalRamp": [
+          "#1a1a23",
+          "#2e2f42",
+          "#414362",
+          "#585c8d",
+          "#7c7fac",
+          "#aaacc5",
+          "#d2d3df",
+          "#f0f1f4"
+        ]
+      },
+      "vien-suong": {
+        "role": "neutral",
+        "displayName": "Viền Sương",
+        "canonical": "#dfe1f2",
+        "tonalRamp": [
+          "#161827",
+          "#262a4a",
+          "#353b6e",
+          "#444ea1",
+          "#6a73be",
+          "#9fa5d0",
+          "#ced0e4",
+          "#eff0f5"
+        ]
+      },
+      "son": {
+        "role": "semantic",
+        "displayName": "Son",
+        "canonical": "#ff8080",
+        "tonalRamp": [
+          "#330a0a",
+          "#620e0e",
+          "#960d0d",
+          "#e00505",
+          "#f73131",
+          "#f17e7e",
+          "#f3bfbf",
+          "#faebeb"
+        ]
+      },
+      "ngoc": {
+        "role": "semantic",
+        "displayName": "Ngọc",
+        "canonical": "#7edba8",
+        "tonalRamp": [
+          "#132a1e",
+          "#205036",
+          "#2b784e",
+          "#35b16d",
+          "#5ccc8e",
+          "#97d8b4",
+          "#cae8d7",
+          "#eef7f2"
+        ]
+      },
+      "hanh-kim": {
+        "role": "semantic",
+        "displayName": "Kim",
+        "canonical": "#5f656e",
+        "tonalRamp": [
+          "#1d1e20",
+          "#35373b",
+          "#4d5157",
+          "#6b717b",
+          "#8d929b",
+          "#b3b7bc",
+          "#d7d8db",
+          "#f2f2f3"
+        ]
+      },
+      "hanh-moc": {
+        "role": "semantic",
+        "displayName": "Mộc",
+        "canonical": "#13703a",
+        "tonalRamp": [
+          "#102d1c",
+          "#1a5633",
+          "#21824a",
+          "#25c166",
+          "#4dda89",
+          "#8fe0b1",
+          "#c6ebd6",
+          "#edf8f1"
+        ]
+      },
+      "hanh-thuy": {
+        "role": "semantic",
+        "displayName": "Thủy",
+        "canonical": "#1e293b",
+        "tonalRamp": [
+          "#181d25",
+          "#2a3546",
+          "#3b4c68",
+          "#4f6a96",
+          "#748cb4",
+          "#a5b3ca",
+          "#d0d7e1",
+          "#f0f2f5"
+        ]
+      },
+      "hanh-hoa": {
+        "role": "semantic",
+        "displayName": "Hỏa",
+        "canonical": "#c81e1e",
+        "tonalRamp": [
+          "#2d1010",
+          "#571919",
+          "#841f1f",
+          "#c42222",
+          "#dd4a4a",
+          "#e28d8d",
+          "#ecc5c5",
+          "#f8eded"
+        ]
+      },
+      "hanh-tho": {
+        "role": "semantic",
+        "displayName": "Thổ",
+        "canonical": "#a14b07",
+        "tonalRamp": [
+          "#311c0c",
+          "#5f3412",
+          "#904a13",
+          "#d7670e",
+          "#ef8939",
+          "#ecb183",
+          "#f1d6c1",
+          "#f9f1eb"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "Số ngày dương lịch lớn; số ngày âm cùng kiểu cỡ 4rem màu Hổ phách sáng."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Tiêu đề tháng, tiêu đề hộp thoại, tên Bắc Đẩu."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Thứ trong tuần, tên tháng âm."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Can Chi, Hoàng đạo, danh sách sắp tới, sự kiện trong tháng."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Nhãn khu vực và nhãn ô nhập, chữ hoa giãn 0.2em."
+      }
+    },
+    "shadows": [
+      {
+        "name": "modal",
+        "value": "0 2rem 4rem rgba(5, 6, 30, 0.6)",
+        "purpose": "Hộp thoại nổi trên lịch đã làm mờ."
+      },
+      {
+        "name": "remote-focus",
+        "value": "0 0 0 0.25rem rgba(255,255,255,0.18), 0 0.6rem 1.6rem rgba(5,6,30,0.4)",
+        "purpose": "Ô đang chọn bằng remote, kèm viền trắng và scale 1.03."
+      },
+      {
+        "name": "today-ring",
+        "value": "inset 0 0 0 2px rgba(242,169,59,0.85)",
+        "purpose": "Vòng Hổ phách của ô hôm nay."
+      }
+    ],
+    "motion": [
+      {
+        "name": "fade-in",
+        "value": "0.25s ease-out (translateY 0.4rem → 0)",
+        "purpose": "Nội dung mới hiện ra khi đổi ngày hoặc mở hộp thoại."
+      },
+      {
+        "name": "state",
+        "value": "0.15s (background, border-color, transform)",
+        "purpose": "Rê chuột và chọn ô ngày."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "compact",
+        "value": "max-width: 900px, max-height: 520px"
+      },
+      {
+        "name": "narrow",
+        "value": "max-width: 360px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Hành động chính duy nhất của màn hình (Thêm, Đi tới).",
+      "html": "<button class=\"ds-btn-primary\">Đi tới</button>",
+      "css": ".ds-btn-primary{font-family:'Be Vietnam Pro',system-ui,sans-serif;font-size:0.9rem;font-weight:600;background:#f2a93b;color:#1b1e52;border:1px solid transparent;border-radius:0.6rem;padding:0.55rem 1.1rem;cursor:pointer;transition:filter .15s}.ds-btn-primary:hover{filter:brightness(1.08)}.ds-btn-primary:focus-visible{outline:2px solid #eef0fa;outline-offset:2px}"
+    },
+    {
+      "name": "Default Button",
+      "kind": "button",
+      "refersTo": "button-default",
+      "description": "Nút thường trên nền Chàm.",
+      "html": "<button class=\"ds-btn\">Xuất file</button>",
+      "css": ".ds-btn{font-family:'Be Vietnam Pro',system-ui,sans-serif;font-size:0.9rem;font-weight:600;background:#22266a;color:#eef0fa;border:1px solid rgba(238,240,250,0.08);border-radius:0.6rem;padding:0.55rem 1.1rem;cursor:pointer;transition:background .15s}.ds-btn:hover{background:#2b307a}.ds-btn:focus-visible{outline:2px solid #a9b0ff;outline-offset:2px}"
+    },
+    {
+      "name": "Ghost Button",
+      "kind": "button",
+      "refersTo": "button-default",
+      "description": "Đóng và hành động phụ, không nền.",
+      "html": "<button class=\"ds-btn-ghost\">Đóng</button>",
+      "css": ".ds-btn-ghost{font-family:'Be Vietnam Pro',system-ui,sans-serif;font-size:0.9rem;font-weight:600;background:transparent;color:#eef0fa;border:1px solid rgba(238,240,250,0.08);border-radius:0.6rem;padding:0.55rem 1.1rem;cursor:pointer}.ds-btn-ghost:hover{background:#2b307a}.ds-btn-ghost:focus-visible{outline:2px solid #a9b0ff;outline-offset:2px}"
+    },
+    {
+      "name": "Text Input",
+      "kind": "input",
+      "refersTo": "input",
+      "description": "Ô nhập trong hộp thoại Ngày của tôi.",
+      "html": "<label class=\"ds-field\"><span>Tên sự kiện</span><input class=\"ds-input\" placeholder=\"VD: Sinh nhật mẹ\"></label>",
+      "css": ".ds-field{display:flex;flex-direction:column;gap:0.4rem;font-family:'Be Vietnam Pro',system-ui,sans-serif}.ds-field span{font-size:max(0.76rem,11px);letter-spacing:0.1em;text-transform:uppercase;color:#a2a6d2;font-weight:600}.ds-input{height:2.6rem;padding:0 0.75rem;font:inherit;font-size:0.95rem;font-weight:600;color:#eef0fa;background:#14173d;border:1px solid rgba(238,240,250,0.08);border-radius:0.55rem;outline:none}.ds-input::placeholder{color:#8489c0;font-weight:400}.ds-input:focus{border-color:#a9b0ff;box-shadow:0 0 0 0.2rem rgba(169,176,255,0.16)}"
+    },
+    {
+      "name": "Event Tag",
+      "kind": "chip",
+      "refersTo": "tag",
+      "description": "Thẻ ngày lễ âm lịch; các biến thể Son/Ngọc/Ánh sao lam theo loại sự kiện.",
+      "html": "<span class=\"ds-tag\">Tết Trùng Cửu</span> <span class=\"ds-tag ds-tag-solar\">Phụ nữ Việt Nam</span> <span class=\"ds-tag ds-tag-mine\">Sinh nhật mẹ</span>",
+      "css": ".ds-tag{display:inline-flex;align-items:center;font-family:'Be Vietnam Pro',system-ui,sans-serif;font-size:0.78rem;font-weight:600;padding:0.3rem 0.7rem;border-radius:999px;background:rgba(242,169,59,0.14);color:#f2a93b;border:1px solid rgba(242,169,59,0.3);white-space:nowrap}.ds-tag-solar{background:rgba(255,128,128,0.14);color:#ff8080;border-color:rgba(255,128,128,0.3)}.ds-tag-mine{background:rgba(126,219,168,0.14);color:#7edba8;border-color:rgba(126,219,168,0.3)}"
+    },
+    {
+      "name": "Segmented Toggle",
+      "kind": "chip",
+      "refersTo": "button-default",
+      "description": "Chọn Dương lịch / Âm lịch.",
+      "html": "<div class=\"ds-seg\"><button class=\"ds-seg-btn is-on\">Dương lịch</button><button class=\"ds-seg-btn\">Âm lịch</button></div>",
+      "css": ".ds-seg{display:inline-flex;gap:0.3rem;background:#22266a;padding:0.25rem;border-radius:0.6rem}.ds-seg-btn{font-family:'Be Vietnam Pro',system-ui,sans-serif;font-size:0.85rem;font-weight:600;color:#a2a6d2;background:transparent;border:0;border-radius:0.45rem;padding:0.4rem 0.9rem;cursor:pointer}.ds-seg-btn:hover{color:#eef0fa}.ds-seg-btn.is-on{background:rgba(169,176,255,0.16);color:#a9b0ff}.ds-seg-btn:focus-visible{outline:2px solid #a9b0ff}"
+    },
+    {
+      "name": "Day Cell",
+      "kind": "card",
+      "refersTo": "day-cell",
+      "description": "Ô ngày trong lưới lịch: thường, hôm nay, tháng khác.",
+      "html": "<div class=\"ds-days\"><div class=\"ds-cell\"><b>18</b><small>Tết Trùng Cửu</small><i>9</i></div><div class=\"ds-cell is-today\"><b>30</b><small></small><i>21</i></div><div class=\"ds-cell is-other\"><b>1</b><small></small><i>23</i></div></div>",
+      "css": ".ds-days{display:flex;gap:0.45rem}.ds-cell{width:7rem;height:5.6rem;display:flex;flex-direction:column;justify-content:space-between;background:#22266a;border-radius:0.65rem;padding:0.5rem 0.65rem;color:#eef0fa;font-family:'Be Vietnam Pro',system-ui,sans-serif;cursor:pointer;transition:background .15s}.ds-cell:hover{background:#2b307a}.ds-cell b{font-family:Unbounded,'Be Vietnam Pro',sans-serif;font-size:1.35rem;font-weight:600;line-height:1}.ds-cell small{font-size:max(0.76rem,11px);color:#f2a93b}.ds-cell i{font-style:normal;align-self:flex-end;font-size:max(0.78rem,11px);color:#a2a6d2}.ds-cell.is-today{box-shadow:inset 0 0 0 2px rgba(242,169,59,0.85)}.ds-cell.is-today b{color:#f2a93b}.ds-cell.is-today i{color:#f8cf8a}.ds-cell.is-other{background:rgba(34,38,106,0.4)}.ds-cell.is-other b,.ds-cell.is-other i{color:#8489c0}"
+    },
+    {
+      "name": "Brand Lockup",
+      "kind": "nav",
+      "refersTo": "button-default",
+      "description": "Logo chòm Bắc Đẩu kèm tên ở header.",
+      "html": "<div class=\"ds-brand\"><svg viewBox=\"0 0 260 240\" width=\"46\" height=\"42\"><g fill=\"none\" stroke=\"#EEF0FA\" stroke-width=\"7\" stroke-linejoin=\"round\" stroke-linecap=\"round\"><polyline points=\"27,211 73,172 112,159 157,153\"/><polygon points=\"157,153 223,126 236,192 171,220\"/></g><path d=\"M210 84L219 116\" stroke=\"#8A8DC0\" stroke-width=\"5\" stroke-linecap=\"round\" stroke-dasharray=\"7 6\"/><g fill=\"#EEF0FA\"><circle cx=\"27\" cy=\"211\" r=\"12\"/><circle cx=\"73\" cy=\"172\" r=\"12\"/><circle cx=\"112\" cy=\"159\" r=\"11\"/><circle cx=\"157\" cy=\"153\" r=\"9\"/><circle cx=\"223\" cy=\"126\" r=\"12\"/><circle cx=\"236\" cy=\"192\" r=\"12\"/><circle cx=\"171\" cy=\"220\" r=\"12\"/></g><path d=\"M204 6Q209.44 34.56 238 40Q209.44 45.44 204 74Q198.56 45.44 170 40Q198.56 34.56 204 6Z\" fill=\"#F2A93B\"/></svg><div><b>Bắc Đẩu</b><small>Tử vi · Lịch vạn niên</small></div></div>",
+      "css": ".ds-brand{display:flex;align-items:center;gap:0.7rem;background:#14173d;padding:0.8rem 1rem;border-radius:0.6rem}.ds-brand b{display:block;font-family:Unbounded,'Be Vietnam Pro',sans-serif;font-size:1.2rem;font-weight:800;line-height:1;color:#eef0fa}.ds-brand small{display:block;margin-top:0.3rem;font-family:'Be Vietnam Pro',sans-serif;font-size:max(0.76rem,11px);font-weight:500;color:#a2a6d2}"
+    }
+  ],
+  "narrative": {
+    "northStar": "Bầu trời đêm chỉ đường",
+    "overview": "Bắc Đẩu là một bầu trời đêm. Nền là các sắc Chàm, sâu dần từ ngoài vào trong. Chữ là ánh Sương, như ánh sao. Hổ phách là ngôi sao dẫn đường duy nhất: nó đánh dấu hôm nay, ngày âm và hành động chính, không trang trí gì khác. Cảm giác cần đạt là trầm, yên và đáng tin. Người xem là cả gia đình nhiều thế hệ, và số liệu (ngày, giờ, sao) là nhân vật chính, không phải giao diện.\n\nMật độ cao nhưng có trật tự. Trên TV và máy tính, màn lịch chia hai cột cố định 35/65 và không cuộn. Lá số Tử Vi là một \"bản đồ sao\" nền sáng, dày đặc thông tin. Thành phần giao diện đi theo hướng tinh gọn, tối giản: ít viền, ít nền. Thứ bậc đến từ màu chữ, độ đậm và khoảng trống, không đến từ khung hộp.\n\nChiều sâu tạo bằng các lớp màu Chàm, không bằng bóng đổ. Bóng chỉ xuất hiện ở hộp thoại nổi lên trên lịch và ở ô đang được chọn bằng remote.",
+    "keyCharacteristics": [
+      "Nền Chàm nhiều lớp. Chữ màu Sương. Hổ phách là điểm nhấn duy nhất.",
+      "Font hiển thị Unbounded rộng, đậm, dùng cho số ngày và tiêu đề. Nội dung dùng Be Vietnam Pro.",
+      "Cỡ chữ co giãn theo chiều cao màn hình (1rem = 100vh/54) và không nhỏ hơn 11px.",
+      "Lá số dùng nền sáng (Giấy trắng, mực Chàm), là ngoại lệ có chủ đích của thế giới đêm.",
+      "Phẳng, tối giản. Chỉ trạng thái mới tạo độ nổi."
+    ],
+    "rules": [
+      {
+        "name": "The One Star Rule",
+        "body": "Hổ phách là ngôi sao duy nhất. Nó chỉ đánh dấu điều người xem cần tìm (hôm nay, ngày âm, hành động chính), không bao giờ dùng để trang trí.",
+        "section": "colors"
+      },
+      {
+        "name": "The Meaning-Locked Rule",
+        "body": "Son, Ngọc và năm màu ngũ hành mang nghĩa cố định. Không dùng chúng cho mục đích khác, kể cả khi màu \"hợp mắt\".",
+        "section": "colors"
+      },
+      {
+        "name": "The Readable Night Rule",
+        "body": "Mọi chữ đạt tương phản tối thiểu 4,5:1 với nền thực tế. Làm mờ bằng cách đổi màu chữ, không bằng `opacity` lên cả khối.",
+        "section": "colors"
+      },
+      {
+        "name": "The 11px Floor Rule",
+        "body": "Không chữ nào nhỏ hơn 11px trên bất kỳ màn hình nào: mọi cỡ dưới 0.84rem viết dạng `max(Xrem, 11px)`.",
+        "section": "typography"
+      },
+      {
+        "name": "The Display-for-Numbers Rule",
+        "body": "Unbounded dành cho con số và tiêu đề. Không dùng cho đoạn văn, nút hay nhãn.",
+        "section": "typography"
+      },
+      {
+        "name": "The Flat-By-Default Rule",
+        "body": "Bề mặt phẳng khi đứng yên. Độ nổi chỉ dành cho trạng thái (đang chọn, hộp thoại đang mở).",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "**Do** dùng Hổ phách sáng (#f2a93b) cho đúng một ý mỗi chỗ: hôm nay, ngày âm, hành động chính.",
+      "**Do** viết mọi cỡ chữ dưới 0.84rem dạng `max(Xrem, 11px)`.",
+      "**Do** kiểm tra tương phản 4,5:1 trên nền thật, gồm cả nền Sương ấm của cung Mệnh và nền ô đang chọn.",
+      "**Do** tạo thứ bậc bằng màu chữ, độ đậm và khoảng trống trước khi nghĩ tới viền hay nền.",
+      "**Do** để lá số tự giãn theo nội dung và cuộn được, thay vì cắt bớt sao."
+    ],
+    "donts": [
+      "**Don't** làm mờ cả khối bằng `opacity` cho trạng thái \"phụ\". Đổi màu chữ sang Khói Chàm.",
+      "**Don't** tô nền Hổ phách lên nền Chàm: hai màu pha nhau thành nâu đục. Dùng viền hoặc màu chữ.",
+      "**Don't** dùng Son, Ngọc hay màu ngũ hành cho mục đích trang trí.",
+      "**Don't** dùng Unbounded cho đoạn văn, nút hay nhãn nhỏ.",
+      "**Don't** thêm gradient, thẻ lồng thẻ hay ô icon bo góc trên mỗi tiêu đề."
+    ]
+  }
+}
