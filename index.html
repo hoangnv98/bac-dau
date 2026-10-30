@@ -14,7 +14,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&family=Unbounded:wght@600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css?v=20261030e">
+  <link rel="stylesheet" href="css/style.css?v=20261030f">
 </head>
 <body class="bg-[#14173d] text-slate-100 overflow-hidden">
   <main id="app">
@@ -170,28 +170,28 @@
     <div class="modal-box tuvi-box" role="dialog" aria-label="Lá số Tử Vi">
       <div class="tuvi-top">
         <div class="modal-title">Lá số Tử Vi
-          <span class="tuvi-tabs" id="tuviTabs">
+          <span class="tuvi-tabs" id="tuviTabs" title="Phím C">
             <button type="button" class="tab-btn is-on" data-tab="laso">Lá số</button>
             <button type="button" class="tab-btn" data-tab="tracuu">Tra cứu</button>
           </span>
         </div>
         <div class="tuvi-controls">
-          <label class="field"><span>Họ tên</span><input id="tuviName" type="text" placeholder="Họ tên" autocomplete="off"></label>
+          <label class="field"><span>Họ tên</span><input id="tuviName" type="text" placeholder="Tùy chọn" autocomplete="off"></label>
           <div class="field"><span>Ngày sinh</span>
-            <div class="seg" id="tuviCal">
+            <div class="seg" id="tuviCal" title="Phím A">
               <button type="button" class="seg-btn is-on" data-cal="solar">Dương lịch</button>
               <button type="button" class="seg-btn" data-cal="lunar">Âm lịch</button>
             </div>
           </div>
-          <label class="field"><span>Giờ sinh</span><select id="tuviHour"></select></label>
+          <label class="field" title="Phím H"><span>Giờ sinh</span><select id="tuviHour"></select></label>
           <div class="field"><span>Giới tính</span>
-            <div class="seg" id="tuviGender">
+            <div class="seg" id="tuviGender" title="Phím N">
               <button type="button" class="seg-btn is-on" data-gender="nam">Nam</button>
               <button type="button" class="seg-btn" data-gender="nữ">Nữ</button>
             </div>
           </div>
-          <label class="field"><span>Năm xem</span><select id="tuviYear"></select></label>
-          <button type="button" class="btn primary" id="btnCopyPrompt" title="Chép prompt + lá số để tự dán vào Gemini / ChatGPT">Copy prompt</button>
+          <label class="field" title="Phím [ và ]"><span>Năm xem</span><select id="tuviYear"></select></label>
+          <button type="button" class="btn primary" id="btnCopyPrompt" title="Chép prompt + lá số để tự dán vào Gemini / ChatGPT (phím P)">Copy prompt</button>
           <button type="button" class="btn ghost act-close">Đóng</button>
         </div>
       </div>
@@ -221,16 +221,16 @@
           <div id="aiBody" class="ai-body"></div>
         </aside>
       </div>
-      <div class="modal-hint">Di chuột hoặc ← ↑ → ↓ chọn cung (nối tam hợp · xung chiếu) · <kbd>H</kbd> giờ sinh · <kbd>N</kbd> giới tính · <kbd>A</kbd> âm/dương lịch · <kbd>[</kbd> <kbd>]</kbd> năm xem · <kbd>P</kbd> copy prompt · <kbd>C</kbd> tra cứu · <kbd>Esc</kbd> đóng</div>
+      <div class="modal-hint">Rê chuột hoặc chạm vào một cung để thấy tam hợp và xung chiếu</div>
     </div>
   </div>
 
-  <script src="js/data.js?v=20261030e"></script>
-  <script src="js/myevents.js?v=20261030e"></script>
-  <script src="js/lunar.js?v=20261030e"></script>
-  <script src="js/tuvi.bundle.js?v=20261030e"></script>
-  <script src="js/tuvi-prompt.js?v=20261030e"></script>
-  <script src="js/app.js?v=20261030e"></script>
-  <script src="js/dialogs.js?v=20261030e"></script>
+  <script src="js/data.js?v=20261030f"></script>
+  <script src="js/myevents.js?v=20261030f"></script>
+  <script src="js/lunar.js?v=20261030f"></script>
+  <script src="js/tuvi.bundle.js?v=20261030f"></script>
+  <script src="js/tuvi-prompt.js?v=20261030f"></script>
+  <script src="js/app.js?v=20261030f"></script>
+  <script src="js/dialogs.js?v=20261030f"></script>
 </body>
 </html>

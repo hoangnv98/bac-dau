@@ -452,8 +452,6 @@
 
     var dOrA = function (duong, am) { return duong === am ? String(duong) : duong + ' <small>(' + am + ')</small>'; };
     html += '<div class="av-center">' +
-      '<div class="av-brand">Bắc Đẩu · Tử Vi Đẩu Số</div>' +
-      '<h3>LÁ SỐ TỬ VI</h3>' +
       '<table>' +
       '<tr><td>Họ tên</td><td colspan="2"><b>' + (t.hoTen ? esc(t.hoTen) : '—') + '</b></td></tr>' +
       '<tr><td>Năm</td><td>' + dOrA(dl.year, al.year) + '</td><td><b>' + esc(al.canChi.nam) + '</b></td></tr>' +
@@ -529,7 +527,7 @@
       html += '<div class="lk-card' + (c.ten === 'Mệnh' ? ' is-menh' : '') + '" id="lkCung' + c.viTri + '" data-chi="' + c.viTri + '">' +
         '<div class="lk-card-head"><h4>Cung ' + esc(c.ten) + (c.laCungThan ? ' <em class="av-than">Thân</em>' : '') +
         '<small>' + esc(c.canChi) + ' · đại hạn ' + c.daiHan.nhan + ' · ' + esc(c.trangSinh) + (c.tuan ? ' · Tuần' : '') + (c.triet ? ' · Triệt' : '') + '</small></h4>' +
-        '<span class="lk-num">' + pad2(i + 1) + '</span></div>' +
+        '</div>' +
         '<div class="lk-chinh">' + (ct.length ? ct.map(function (s) { return saoSpan(s); }).join(', ') : '<span class="lk-vcd">Vô chính diệu</span>') + '</div>' +
         '<div class="lk-phu">' + pt.map(function (s) { return saoSpan(s); }).join(', ') + '</div>' +
         '<button type="button" class="lk-toggle" data-chi="' + c.viTri + '">' + (isOpen ? '▴ Thu gọn' : '▾ Ý nghĩa các sao') + '</button>' +

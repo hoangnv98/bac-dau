@@ -253,6 +253,8 @@ Tinh gọn, tối giản: thành phần lùi lại để số liệu nói. Thêm
   - đầu: Can Chi, tên cung, tuổi đại hạn;
   - giữa: chính tinh (đậm, giữa ô), phụ tinh cát bên trái và hung bên phải, tô màu theo ngũ hành;
   - chân: tiểu hạn, Tràng sinh, nguyệt hạn.
+- Khối trung tâm chỉ là bảng thông tin (họ tên, năm/tháng/ngày/giờ, âm dương, cục, Tứ Hóa), không lặp lại tiêu đề "Lá số Tử Vi" đã có ở đầu hộp thoại.
+- Tab Tra cứu: cột tra nhanh và danh sách 12 cung đặt thẳng trên nền trắng, ngăn bằng một đường kẻ, không đóng khung, không đánh số cung.
 - Cung Mệnh có nền Sương ấm (#fdf6ea) và tên cung màu Hổ phách đậm (#8f5306).
 - Cung đang chọn có viền Chàm 2px. Đường nối tới tam hợp là nét liền, tới xung chiếu là nét đứt Hổ phách.
 
