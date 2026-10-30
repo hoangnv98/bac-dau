@@ -11,7 +11,7 @@
   --line: rgba(238, 240, 250, 0.08);
   --text: #eef0fa;
   --muted: #a2a6d2;
-  --dim: #6d72aa;
+  --dim: #8489c0;
   --accent: #a9b0ff;
   --accent-bg: rgba(169, 176, 255, 0.16);
   --amber: #f2a93b;
@@ -59,8 +59,8 @@ html, body {
 
 /* ---- Typography ---- */
 .eyebrow {
-  font-size: 0.7rem;
-  letter-spacing: 0.22em;
+  font-size: 0.76rem;
+  letter-spacing: 0.2em;
   text-transform: uppercase;
   color: var(--muted);
   font-weight: 600;
@@ -76,7 +76,7 @@ html, body {
 .t-lg { font-size: 1.4rem; font-weight: 600; line-height: 1.2; }
 .t-md { font-size: 1rem; color: var(--muted); }
 .t-sm { font-size: 0.85rem; }
-.t-xs { font-size: 0.7rem; }
+.t-xs { font-size: 0.76rem; }
 .divider { height: 1px; background: var(--line); margin: 1.6rem 0 1.4rem; }
 .row { display: flex; align-items: flex-end; gap: 1.1vw; }
 .info-line { font-size: 0.85rem; color: #c6c9e8; line-height: 1.5; }
@@ -136,7 +136,7 @@ html, body {
 /* ---- Header lịch ---- */
 .cal-header { display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; }
 .month-title { font-family: var(--font-display); font-size: 1.55rem; font-weight: 700; margin: 0; letter-spacing: -0.01em; }
-.hint { text-align: right; font-size: 0.72rem; color: var(--dim); }
+.hint { text-align: right; font-size: 0.76rem; color: var(--dim); }
 .hint .dot { display: inline-block; width: 0.55rem; height: 0.55rem; border-radius: 50%; background: var(--yellow); vertical-align: middle; margin-right: 0.25rem; }
 .hint kbd {
   font: inherit; color: var(--muted); background: var(--cell); border: 1px solid var(--line);
@@ -146,8 +146,8 @@ html, body {
 /* ---- Logo Bắc Đẩu ---- */
 .brand { display: flex; align-items: center; gap: 0.7rem; min-width: 0; }
 .brand img { height: 2.6rem; width: auto; flex: none; }
-.brand-name { display: block; font-family: var(--font-display); font-size: 1.15rem; font-weight: 800; line-height: 1; letter-spacing: -0.01em; color: var(--text); white-space: nowrap; }
-.brand-sub { display: block; margin-top: 0.3rem; font-size: 0.62rem; font-weight: 500; color: var(--muted); white-space: nowrap; }
+.brand-name { display: block; font-family: var(--font-display); font-size: 1.2rem; font-weight: 800; line-height: 1; letter-spacing: -0.01em; color: var(--text); white-space: nowrap; }
+.brand-sub { display: block; margin-top: 0.3rem; font-size: 0.76rem; font-weight: 500; color: var(--muted); white-space: nowrap; }
 
 /* ---- Hàng thứ ---- */
 .weekdays { display: grid; grid-template-columns: repeat(7, 1fr); margin-top: 2vh; }
@@ -183,7 +183,7 @@ html, body {
 .cell .solar { font-family: var(--font-display); font-size: 1.35rem; font-weight: 600; line-height: 1; }
 .cell .hd { width: 0.4rem; height: 0.4rem; border-radius: 50%; background: var(--green); flex: none; transform: translateY(-0.45rem); }
 .cell .ev {
-  font-size: 0.68rem;
+  font-size: 0.76rem;
   color: var(--muted);
   white-space: nowrap;
   overflow: hidden;
@@ -199,8 +199,8 @@ html, body {
 .cell.sun .solar { color: var(--red); }
 .cell.sat .solar { color: #d3d6f0; }
 .cell.holiday .solar { color: var(--red); }
-.cell.other { opacity: 0.32; }
-.cell.other:hover { opacity: 0.6; }
+.cell.other { opacity: 0.5; }
+.cell.other:hover { opacity: 0.75; }
 
 .cell.today { box-shadow: inset 0 0 0 2px rgba(242, 169, 59, 0.85); }
 .cell.today .solar { color: var(--amber); }
@@ -297,7 +297,7 @@ html, body {
   .mobile-bar .today-btn { color: var(--yellow); }
 
   .weekdays { margin-top: 0.8rem; }
-  .weekdays div { font-size: 0.68rem; letter-spacing: 0.08em; }
+  .weekdays div { font-size: 0.74rem; letter-spacing: 0.08em; }
 
   /* Lưới: ô vuông, không bị ép chiều cao */
   .grid {
@@ -318,7 +318,7 @@ html, body {
   .cell .solar { font-size: 1.05rem; }
   .cell .hd { width: 0.3rem; height: 0.3rem; transform: translateY(-0.3rem); }
   .cell .ev { display: none; }
-  .cell .lunar { font-size: 0.62rem; }
+  .cell .lunar { font-size: 0.72rem; }
   .cell.focus { transform: none; box-shadow: 0 0 0 0.15rem rgba(255, 255, 255, 0.18); }
 
   .month-events {
@@ -385,12 +385,12 @@ body.modal-open #app { filter: blur(6px) brightness(0.6); }
   padding: 1.6rem 1.8rem; max-width: 100%; max-height: 100%; overflow: auto;
 }
 .modal-title { font-family: var(--font-display); font-size: 1.2rem; font-weight: 700; margin-bottom: 1rem; }
-.modal-hint { margin-top: 1rem; font-size: 0.7rem; color: var(--dim); text-align: center; }
+.modal-hint { margin-top: 1rem; font-size: 0.76rem; color: var(--dim); text-align: center; }
 .modal-actions { display: flex; justify-content: flex-end; gap: 0.6rem; margin-top: 1.2rem; }
 
 /* Trường nhập */
 .field { display: flex; flex-direction: column; gap: 0.3rem; border: 2px solid transparent; border-radius: 0.6rem; padding: 0.3rem; }
-.field > span { font-size: 0.7rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); font-weight: 600; }
+.field > span { font-size: 0.76rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); font-weight: 600; }
 .field input[type=number], .field select {
   font: inherit; font-size: 1.3rem; font-weight: 700; color: var(--text);
   background: var(--cell); border: 1px solid var(--line); border-radius: 0.5rem;
@@ -426,7 +426,7 @@ body.modal-open #app { filter: blur(6px) brightness(0.6); }
   background: rgba(255, 255, 255, 0.025); border: 1px solid var(--line); border-radius: 0.8rem; padding: 1rem;
 }
 .mf { display: flex; flex-direction: column; gap: 0.4rem; min-width: 0; }
-.mf > span { font-size: 0.68rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); font-weight: 600; }
+.mf > span { font-size: 0.76rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); font-weight: 600; }
 .mf-name { grid-column: 1 / -1; }
 .mf input {
   box-sizing: border-box; height: 2.6rem; width: 100%; padding: 0 0.75rem;
