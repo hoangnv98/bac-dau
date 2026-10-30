@@ -1,5 +1,5 @@
 /*
- * Server tĩnh cho Lịch Vạn Niên / Tử Vi.
+ * Server tĩnh cho Bắc Đẩu (Lịch vạn niên / Tử Vi).
  * Chạy:  node server/server.js   (mặc định http://localhost:8080, đổi cổng bằng biến môi trường PORT)
  * Prompt: server/prompt.txt (tùy chọn, thay prompt mặc định trong js/tuvi-prompt.js) – không phục vụ dạng file tĩnh; trình duyệt chỉ lấy được qua GET /api/prompt (nút "Copy prompt").
  */
@@ -21,7 +21,7 @@ function readPrompt() {
 }
 
 /* ---------- Static ---------- */
-const MIME = { '.html': 'text/html; charset=utf-8', '.js': 'text/javascript; charset=utf-8', '.css': 'text/css; charset=utf-8', '.json': 'application/json; charset=utf-8', '.png': 'image/png', '.svg': 'image/svg+xml', '.ico': 'image/x-icon', '.txt': 'text/plain; charset=utf-8', '.md': 'text/markdown; charset=utf-8' };
+const MIME = { '.html': 'text/html; charset=utf-8', '.js': 'text/javascript; charset=utf-8', '.css': 'text/css; charset=utf-8', '.json': 'application/json; charset=utf-8', '.png': 'image/png', '.svg': 'image/svg+xml', '.ico': 'image/x-icon', '.txt': 'text/plain; charset=utf-8', '.md': 'text/markdown; charset=utf-8', '.webmanifest': 'application/manifest+json; charset=utf-8' };
 
 function serveStatic(req, res) {
   let p = decodeURIComponent(new URL(req.url, 'http://x').pathname);
@@ -48,5 +48,5 @@ http.createServer((req, res) => {
   }
   serveStatic(req, res);
 }).listen(PORT, () => {
-  console.log(`Lịch Vạn Niên: http://localhost:${PORT}  (prompt: ${readPrompt() ? 'server/prompt.txt' : 'mặc định'})`);
+  console.log(`Bắc Đẩu: http://localhost:${PORT}  (prompt: ${readPrompt() ? 'server/prompt.txt' : 'mặc định'})`);
 });

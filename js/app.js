@@ -1,4 +1,4 @@
-/* Lịch Vạn Niên – logic giao diện & điều khiển TV */
+/* Bắc Đẩu (Lịch vạn niên) – logic giao diện & điều khiển TV */
 (function () {
   'use strict';
 
@@ -241,15 +241,9 @@
     $('monthEvents').innerHTML = html || '<span class="empty">Không có sự kiện nổi bật trong tháng.</span>';
   }
 
-  function renderTodayLine() {
-    var t = dayInfo(state.todayJd);
-    $('todayLine').textContent = 'Hôm nay: ' + D.WEEKDAYS[t.weekday] + ', ' + pad2(t.d) + '/' + pad2(t.m) + '/' + t.y;
-  }
-
   function renderAll() {
     renderLeft();
     renderGrid();
-    renderTodayLine();
   }
 
   /* ---------- Điều hướng ---------- */

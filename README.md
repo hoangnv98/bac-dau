@@ -1,6 +1,20 @@
-# Lịch Vạn Niên – Smart TV Dashboard
+# Bắc Đẩu · Tử vi · Lịch vạn niên
 
-Ứng dụng web một trang (SPA) hiển thị Lịch Vạn Niên tối ưu cho màn hình ngang 16:9 / Smart TV, giao diện tối.
+![Bắc Đẩu](img/logo.png)
+
+Ứng dụng web một trang (SPA) hiển thị Lịch vạn niên và lá số Tử Vi, tối ưu cho màn hình ngang 16:9 / Smart TV, chạy cả trên điện thoại.
+
+## Nhận diện
+
+| Màu | Mã | Dùng cho |
+|-----|----|----------|
+| Chàm | `#2A2E86` | Màu chính: logo, nút, chữ trên nền sáng; nền app là các sắc Chàm đậm (`#14173D`, `#1B1E52`) |
+| Hổ phách | `#BF7310` | Ngôi sao, điểm nhấn (trên nền tối dùng bản sáng `#F2A93B`) |
+| Sương | `#EEF0FA` | Nền sáng, chữ trên nền tối |
+
+- Font: **Unbounded** cho tên, tiêu đề và số lớn; **Be Vietnam Pro** cho nội dung (Google Fonts, đều có tiếng Việt).
+- `img/`: `mark.svg` (chòm sao, nền sáng), `mark-light.svg` (nền tối), `icon.svg` / `icon-192.png` / `icon-512.png` / `apple-touch-icon.png` (icon app),
+  `icon-small.svg` (favicon, chỉ ngôi sao), `logo.png` / `logo-dark.png` (logo đầy đủ kèm chữ).
 
 ## Chạy
 
@@ -17,7 +31,8 @@ Không cần build. Tailwind CSS được nạp qua CDN; toàn bộ layout cốt
 | File | Vai trò |
 |------|---------|
 | `index.html` | Khung giao diện 2 cột (35% / 65%) |
-| `css/style.css` | Theme tối, tỉ lệ chữ theo chiều cao màn hình (`1rem = 100vh/54`) |
+| `manifest.webmanifest` | Tên, màu, icon khi cài lên màn hình chính điện thoại |
+| `css/style.css` | Theme Chàm theo bảng màu Bắc Đẩu, tỉ lệ chữ theo chiều cao màn hình (`1rem = 100vh/54`) |
 | `js/lunar.js` | Thuật toán Âm lịch Việt Nam của Hồ Ngọc Đức (JDN, sóc, tiết khí, nhuận) |
 | `js/data.js` | Can Chi, Tiết khí, 12 thần Hoàng/Hắc đạo, Trực, Nhị thập bát tú, Nạp âm, Ngày lễ |
 | `js/myevents.js` | "Ngày của tôi": sinh nhật, ngày giỗ, kỷ niệm do người dùng thêm, lưu ở `localStorage` (key `customEvents`) |

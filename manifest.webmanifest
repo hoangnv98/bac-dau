@@ -1,0 +1,15 @@
+{
+  "name": "Bắc Đẩu · Tử vi · Lịch vạn niên",
+  "short_name": "Bắc Đẩu",
+  "description": "Lịch vạn niên âm dương và lá số Tử Vi",
+  "lang": "vi",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#14173d",
+  "theme_color": "#14173d",
+  "icons": [
+    { "src": "img/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "img/icon-512.png", "sizes": "512x512", "type": "image/png" },
+    { "src": "img/icon.svg", "sizes": "any", "type": "image/svg+xml" }
+  ]
+}

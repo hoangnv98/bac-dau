@@ -452,7 +452,7 @@
 
     var dOrA = function (duong, am) { return duong === am ? String(duong) : duong + ' <small>(' + am + ')</small>'; };
     html += '<div class="av-center">' +
-      '<div class="av-brand">Lịch Vạn Niên · Tử Vi Đẩu Số</div>' +
+      '<div class="av-brand">Bắc Đẩu · Tử Vi Đẩu Số</div>' +
       '<h3>LÁ SỐ TỬ VI</h3>' +
       '<table>' +
       '<tr><td>Họ tên</td><td colspan="2"><b>' + (t.hoTen ? esc(t.hoTen) : '—') + '</b></td></tr>' +
